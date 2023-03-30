@@ -4,11 +4,8 @@
   justify-content: end;
 }
 
-.github-link {
+.header-link {
   margin-right: 30px;
   text-decoration: none;
-  color: inherit;
-}
-.linkedIn-link {
-  margin-right: 30px;
+  color: #090934;
 }

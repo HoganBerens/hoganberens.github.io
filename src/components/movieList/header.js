@@ -48,7 +48,7 @@ const Header = () => {
               ))}
             </div>
           ) : (
-            <div className="noResults">"No Movies Found"</div>
+            <div className="noResults">No Movies Found</div>
           )}
         </div>
       </div>

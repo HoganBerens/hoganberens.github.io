@@ -6,7 +6,7 @@ const AboutMe = () => {
     <div className="aboutMe-wrapper">
       <div className="aboutMe-title">Welcome</div>
       <div className="aboutMe-content">
-        My Name is Hogan Berens, I am a self-taught software developer. 
+        My name is Hogan Berens, I am a self-taught software developer.
       </div>
     </div>
   );
