@@ -1,0 +1,14 @@
+.aboutMe-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.aboutMe-title {
+  font-size: 100px;
+  margin-bottom: 40px;
+}
+.aboutMe-content {
+  font-size: 18px;
+  max-width: 413px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}

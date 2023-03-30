@@ -1,0 +1,65 @@
+.home-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  margin: 0px;
+  background-color: #f3cbcb;
+}
+.header {
+  background-color: rgb(216, 244, 244);
+  font-size: 38px;
+  text-align: center;
+}
+
+.movieWrapper {
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+.movieTitle {
+  padding: 5px;
+  inline-size: 350px;
+}
+
+.moviePoster {
+}
+
+.mapWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+.favoriteMovie-wrapper {
+  position: relative;
+}
+.heart {
+  position: absolute;
+}
+.heart-wrapper {
+  position: relative;
+}
+
+.favoriteWrapper {
+  display: flex;
+  background-color: #f3cbcb;
+  flex-wrap: wrap;
+}
+.favoriteMovie {
+  flex: 1 1 auto;
+}
+
+.favoriteTitle {
+}
+.favoritePoster {
+}
+
+.movieListTitles {
+  margin-left: 10px;
+}

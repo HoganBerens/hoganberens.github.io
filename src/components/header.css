@@ -1,0 +1,14 @@
+.header-children {
+  display: flex;
+  margin: 50px;
+  justify-content: end;
+}
+
+.github-link {
+  margin-right: 30px;
+  text-decoration: none;
+  color: inherit;
+}
+.linkedIn-link {
+  margin-right: 30px;
+}
