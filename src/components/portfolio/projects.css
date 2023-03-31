@@ -13,7 +13,7 @@
       #f3f7d4,
       #f3f7d4,
       #f3f7d4,
-      #fd4d0c
+      #e9967a
     )
     1;
 }
@@ -30,9 +30,9 @@
   background: linear-gradient(
       to right,
       #f3f7d4 0%,
-      #fd4d0c 12%,
-      #fd4d0c 47%,
-      #fd4d0c 100%
+      #f5d0c3 12%,
+      #eeae99 47%,
+      #e9967a 100%
     )
     left bottom #f3f7d4 no-repeat;
   background-size: 100% 2px;

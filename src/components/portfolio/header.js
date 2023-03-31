@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header-children">
       <a
-        className="header-link"
+        className="header-github-link"
         href="https://github.com/HoganBerens"
         target="_blank"
       >

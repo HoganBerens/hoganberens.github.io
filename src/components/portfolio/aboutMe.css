@@ -3,11 +3,13 @@
   flex-direction: column;
 }
 .aboutMe-title {
-  font-size: 100px;
+  font-size: 80px;
   margin-bottom: 40px;
+  color: #090934;
 }
 .aboutMe-content {
   font-size: 18px;
+  color: #090934;
   max-width: 413px;
   flex-wrap: wrap;
   margin-bottom: 40px;

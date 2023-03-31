@@ -10,6 +10,7 @@ const Dashboard = () => {
       <div className="dashboard-background-box" />
       <div className="dashboard-box-wrapper">
         <AboutMe />
+        <Projects />
       </div>
     </div>
   );
