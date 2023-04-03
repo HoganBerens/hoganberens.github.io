@@ -74,3 +74,36 @@
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 1300px) {
+  .dashboard-box-wrapper {
+    max-width: 800px;
+    max-height: 600px;
+    min-width: 800px;
+    min-height: 600px;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    padding: 25px;
+  }
+  .dashboard-background-box {
+    max-width: 800px;
+    max-height: 600px;
+    min-width: 800px;
+    min-height: 600px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .dashboard-box-wrapper {
+    max-width: 600px;
+    max-height: 400px;
+    min-width: 600px;
+    min-height: 400px;
+    padding: 15px;
+  }
+  .dashboard-background-box {
+    max-width: 600px;
+    max-height: 400px;
+    min-width: 600px;
+    min-height: 400px;
+  }
+}
