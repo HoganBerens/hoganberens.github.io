@@ -27,7 +27,7 @@ const Header = () => {
     <div>
       <div className="header-wrapper">
         <Link className="home-button" to={`/`}>
-          Home
+          Back
         </Link>
         <div className="title">Movie List</div>
         <div className="search-wrapper">

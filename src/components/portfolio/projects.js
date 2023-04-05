@@ -7,12 +7,15 @@ const Projects = () => {
     <div className="project-wrapper">
       <div className="projects-title">Projects</div>
       <div className="projects-container">
-        <div className="projects">My-Golf-Game</div>
+        <Link className="projects" to="/my-golf-game">
+          My-Golf-Game
+        </Link>
         <Link className="projects" to="/movieList">
           Movie List
         </Link>
-        <div className="projects">Calculator</div>
-        <div className="projects">Login Page</div>
+        <Link className="projects" to="/calculator">
+          Calculator
+        </Link>
       </div>
     </div>
   );
