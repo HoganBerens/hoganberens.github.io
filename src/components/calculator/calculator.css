@@ -6,16 +6,31 @@
   align-items: center;
   background-color: rgb(206, 206, 206);
 }
+.calculator-back-button {
+  position: absolute;
+  left: 1px;
+  bottom: 600px;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
 .calculator-boundary {
   max-width: 400px;
+  position: relative;
 }
 .calculator-display {
   font-size: 40px;
-  height: 50px;
+  height: 80px;
   margin-bottom: 20px;
   display: flex;
   justify-content: end;
   padding-right: 10px;
+  border: solid 2px black;
+  align-items: center;
 }
 .calculator-buttons-wrapper {
   max-width: 400px;
@@ -31,10 +46,7 @@
 .calculator-numbers {
   font-size: 28px;
   width: 99px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 100px;
 }
 .calculator-operator-wrapper {
   display: flex;
@@ -42,10 +54,10 @@
 }
 .calculator-symbols {
   font-size: 28px;
+  border-radius: 100px;
   width: 99px;
   background-color: #4056a1;
   height: 25%;
-  border-radius: 10px;
   color: white;
 }
 .calculator-special-symbols-container {
@@ -67,5 +79,5 @@
   background-color: #4056a1;
   height: 100px;
   color: white;
-  border-radius: 10px;
+  border-radius: 100px;
 }

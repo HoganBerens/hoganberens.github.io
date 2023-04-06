@@ -1,7 +1,7 @@
 .projects-container {
   display: flex;
-  align-items: center;
-  padding: 15px 0px 0px 40px;
+  align-items: flex-start;
+  padding: 20px 0px 0px 20px;
   flex-direction: column;
   border-style: solid;
   border-width: 4px;
@@ -27,7 +27,7 @@
 .projects {
   font-size: 20px;
   color: #090934;
-  margin: 20px 0px;
+  margin-bottom: 40px;
   padding-bottom: 1px;
   background: linear-gradient(
       to right,
@@ -52,7 +52,7 @@
     justify-content: space-between;
   }
   .projects {
-    margin: 20px 0 0 10px;
+    margin-bottom: 30px;
   }
   .projects-container {
     font-size: 15px;
@@ -66,5 +66,8 @@
   }
   .projects-container {
     padding-left: 15px;
+  }
+  .projects {
+    margin-left: 5px;
   }
 } ;

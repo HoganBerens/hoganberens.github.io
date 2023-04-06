@@ -1,11 +1,14 @@
 import React, { useCallback, useState } from "react";
 import "./calculator.css";
+import { Link } from "react-router-dom";
 
 const Calculator = () => {
   const [updatedNumber, setUpdatedNumber] = useState("");
   const [firstNumber, setFirstNumber] = useState("");
   const [mathSymbol, setMathSymbol] = useState("");
   const [displayValue, setDisplayValue] = useState("0");
+
+  const backHandler = () => {};
 
   const handleNumber = useCallback(
     (number) => {
@@ -58,6 +61,9 @@ const Calculator = () => {
   return (
     <div className="calculator-container">
       <div className="calculator-boundary">
+        <Link className="calculator-back-button" to="/">
+          Back to portfolio
+        </Link>
         <div className="calculator-display">{displayValue}</div>
         <div className="calculator-buttons-wrapper">
           <div className="calculator-numbers-wrapper">

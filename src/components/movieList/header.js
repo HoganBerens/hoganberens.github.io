@@ -27,7 +27,7 @@ const Header = () => {
     <div>
       <div className="header-wrapper">
         <Link className="home-button" to={`/`}>
-          Back
+          Back to portfolio
         </Link>
         <div className="title">Movie List</div>
         <div className="search-wrapper">

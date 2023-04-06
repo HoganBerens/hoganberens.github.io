@@ -8,10 +8,12 @@ import PopularMovies from "./popularMovies";
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [favorited, setFavorited] = useState([]);
+  const [hasFavorited, setHasFavorited] = useState(false);
 
   let favoriteHandler = useCallback(
     (movie, event) => {
       event.preventDefault();
+      setHasFavorited(true);
       let movieIndex = -1;
       let movieList = favorited.slice();
 
@@ -42,7 +44,9 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <Header />
+      {}
       <FavoriteMovies favorited={favorited} favoriteHandler={favoriteHandler} />
+      <div>No favorite movies yet</div>
       <PopularMovies
         popularMovies={popularMovies}
         favoriteHandler={favoriteHandler}
