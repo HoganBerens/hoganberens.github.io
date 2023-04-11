@@ -43,7 +43,7 @@ const ViewMovie = () => {
           src={`${imagePath}${clickedMovie.poster_path}`}
         />
         <div className="childrenWrapper">
-          <h1 className="title">{clickedMovie.title}</h1>
+          <h1 className="view-movie-title">{clickedMovie.title}</h1>
           <div className="description">
             <b>Description: </b>
             {clickedMovie.overview}
@@ -59,10 +59,9 @@ const ViewMovie = () => {
           <div className="trailer" onClick={trailerHandler}>
             Watch Trailer
           </div>
-          {console.log(clickedMovie)}
         </div>
       </div>
-      <Link className="backButton" to={`/`}></Link>
+      <Link className="backButton" to={`/movieList`}></Link>
     </div>
   );
 };

@@ -44,9 +44,17 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <Header />
-      {}
-      <FavoriteMovies favorited={favorited} favoriteHandler={favoriteHandler} />
-      <div>No favorite movies yet</div>
+      {favorited.length ? (
+        <FavoriteMovies
+          favorited={favorited}
+          favoriteHandler={favoriteHandler}
+        />
+      ) : (
+        <div className="favorite-movie-wrapper">
+          <h1 className="movieListTitles">Favorite Movies</h1>
+          <div className="no-favorited-movies">No Favorited Movies</div>
+        </div>
+      )}
       <PopularMovies
         popularMovies={popularMovies}
         favoriteHandler={favoriteHandler}

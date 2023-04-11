@@ -4,7 +4,7 @@
   width: 100vw;
   flex-direction: column;
   margin: 0px;
-  background-color: #f3cbcb;
+  background-color: #e6f5ff;
 }
 .header {
   background-color: rgb(216, 244, 244);
@@ -15,6 +15,7 @@
 .movieWrapper {
   padding: 10px;
   flex: 1 1 auto;
+  height: 663px;
 }
 
 .movieTitle {
@@ -28,6 +29,8 @@
 .mapWrapper {
   display: flex;
   flex-wrap: wrap;
+  background-color: #e6f5ff;
+  justify-content: space-around;
 }
 
 a:link {
@@ -39,27 +42,29 @@ a:link {
 .favoriteMovie-wrapper {
   position: relative;
 }
+.popularMoviesHeartWrapper {
+  position: relative;
+}
 .heart {
   position: absolute;
-}
-.heart-wrapper {
-  position: relative;
+  right: 5px;
+  top: 25px;
 }
 
 .favoriteWrapper {
   display: flex;
-  background-color: #f3cbcb;
+  background-color: #e6f5ff;
   flex-wrap: wrap;
 }
 .favoriteMovie {
   flex: 1 1 auto;
-}
-
-.favoriteTitle {
-}
-.favoritePoster {
+  position: relative;
 }
 
 .movieListTitles {
+  margin-left: 10px;
+}
+.no-favorited-movies {
+  font-size: 28px;
   margin-left: 10px;
 }

@@ -12,7 +12,7 @@ const PopularMovies = (props) => {
       <h1 className="movieListTitles">Popular Movies</h1>
       <div className="mapWrapper">
         {popularMovies.map((movie, index) => (
-          <div>
+          <div className="popularMoviesHeartWrapper">
             <Link
               to={`/viewMovie?id=${movie.id}`}
               className="movieWrapper"

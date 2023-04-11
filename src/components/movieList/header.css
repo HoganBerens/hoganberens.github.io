@@ -1,15 +1,23 @@
 .header-wrapper {
   display: flex;
-  background-color: blanchedalmond;
+  background-color: #3282b8;
 }
 .home-button {
   flex: 1 1 auto;
   margin-left: 15px;
   align-self: center;
   font-size: 24px;
+  text-decoration: none;
+  color: white;
 }
 
 .title {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+.view-movie-title {
   flex: 1 1 auto;
   text-align: center;
   font-size: 40px;
@@ -22,31 +30,32 @@
   align-self: center;
 }
 
-.link {
+link {
   flex: 1 1 auto;
   text-decoration: none;
   color: black;
 }
 
-.search-icon {
+.search-wrapper {
+  flex: 1 1 auto;
   position: relative;
+  align-self: center;
+  display: flex;
+  margin-right: 10px;
+
+  justify-content: center;
 }
 
 .results-wrapper {
   position: absolute;
-  background-color: cornsilk;
-  top: 50px;
+  background-color: #3282b8;
+  top: 80px;
   padding: 10px;
   overflow-y: scroll;
   max-height: 335px;
+  z-index: 1;
 }
 
-.search-wrapper {
-  flex: 1 1 auto;
-  align-self: center;
-  display: flex;
-  margin-right: 10px;
-}
 .search-poster {
   max-height: 90px;
   max-width: 70px;
@@ -64,7 +73,13 @@
 }
 .noResults {
   position: absolute;
-  right: 15px;
-  top: 37px;
-  background-color: cornsilk;
+  top: 70px;
+  background-color: #3282b8;
+  right: 250px;
+}
+.movie-list-search-bar {
+  height: 50px;
+  width: 30%;
+  align-self: center;
+  margin-right: 30px;
 }

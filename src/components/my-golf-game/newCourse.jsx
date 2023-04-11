@@ -71,20 +71,35 @@ const NewCourse = () => {
       <form onSubmit={courseSubmitHandler} className="new-course-form">
         <input type="text" placeholder="Course Name" />
         <input
+          className="my-golf-game-inputs"
           id="tee-color"
           type="text"
           placeholder="Tees Color"
           ref={colorRef}
         />
-        <input id="tee-par" type="text" placeholder="Tees par" ref={parRef} />
         <input
+          className="my-golf-game-inputs"
+          id="tee-par"
+          type="text"
+          placeholder="Tees par"
+          ref={parRef}
+        />
+        <input
+          className="my-golf-game-inputs"
           id="tee-distance"
           type="text"
           placeholder="Tees Distance"
           ref={distanceRef}
         />
-        <input id="tee-slope" type="text" placeholder="Slope" ref={slopeRef} />
         <input
+          id="tee-slope"
+          type="text"
+          className="my-golf-game-inputs"
+          placeholder="Slope"
+          ref={slopeRef}
+        />
+        <input
+          className="my-golf-game-inputs"
           id="tee-rating"
           type="text"
           placeholder="Rating"

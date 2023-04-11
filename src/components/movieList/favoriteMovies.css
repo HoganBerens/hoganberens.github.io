@@ -1,0 +1,11 @@
+.favorite-movie-wrapper {
+  margin-bottom: 20px;
+}
+.favorited-movieTitle {
+  margin: 10px 0 0 30px;
+}
+.favoriteMovieHeart {
+  position: absolute;
+  top: 25px;
+  left: 320px;
+}

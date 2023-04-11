@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-color: beige;
+  background-color: #e6f5ff;
   height: 100vh;
   width: 100vw;
   align-items: center;
@@ -17,10 +17,12 @@
 
 .childrenWrapper {
   font-size: 20px;
-  margin-left: 20px;
-}
-
-.title {
+  min-height: 390px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 40px;
 }
 
 .description {

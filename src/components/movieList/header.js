@@ -15,6 +15,7 @@ const Header = () => {
       .then((data) => {
         if (data && data.results) {
           setSearchResults(data.results);
+          setHasSearched(true);
         } else {
           setSearchResults([]);
         }
@@ -31,8 +32,12 @@ const Header = () => {
         </Link>
         <div className="title">Movie List</div>
         <div className="search-wrapper">
-          <label className="search-icon">Search</label>
-          <input type="text" onChange={submitHandler} />
+          <input
+            placeholder="Search"
+            className="movie-list-search-bar"
+            type="text"
+            onChange={submitHandler}
+          />
           {!!searchResults.length ? (
             <div className="results-wrapper">
               {searchResults.map((movie, index) => (
@@ -47,8 +52,10 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-          ) : (
+          ) : hasSearched ? (
             <div className="noResults">No Movies Found</div>
+          ) : (
+            <div></div>
           )}
         </div>
       </div>
