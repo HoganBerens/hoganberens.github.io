@@ -1,6 +1,20 @@
 .my-golf-game-dashboard-container {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   background-color: #7395ae;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.my-golf-game-dashboard-card {
+  background-color: azure;
+}
+
+@media screen and (max-width: 1450px) {
+  .my-golf-game-dashboard-card {
+    height: 200px;
+    width: 500px;
+  }
+} ;

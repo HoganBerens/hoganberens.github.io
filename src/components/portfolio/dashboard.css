@@ -74,7 +74,7 @@
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
   .dashboard-box-wrapper {
     max-width: 800px;
     max-height: 600px;
