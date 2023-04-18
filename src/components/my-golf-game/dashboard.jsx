@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./dashboard.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './dashboard.css';
+import { user } from './utils';
 
 const Dashboard = () => {
-  const user = JSON.parse(sessionStorage.getItem("user"));
-
   return (
     <div className="my-golf-game-dashboard-container">
       <div className="my-golf-game-header">
@@ -13,7 +12,7 @@ const Dashboard = () => {
         <Link to="/profile">Profile</Link>
       </div>
       <div className="my-golf-game-dashboard-card-container">
-        <Link to="/newScoreDetails" className="my-golf-game-dashboard-card">
+        <Link to="/newScore" className="my-golf-game-dashboard-card">
           Enter New Score
         </Link>
         <Link to="/yourScores" className="my-golf-game-dashboard-card">

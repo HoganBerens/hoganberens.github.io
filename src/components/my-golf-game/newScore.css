@@ -1,0 +1,97 @@
+.newScore-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #e6e5d4;
+}
+.newScore-title {
+  margin-top: 10%;
+}
+
+.newScore-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.newScore-fairway-container {
+  position: relative;
+  margin: 35% 0px;
+}
+
+img {
+  height: 40%;
+  width: 40%;
+}
+
+.fairway-chevron-up {
+  position: absolute;
+  bottom: 105%;
+  right: 45%;
+  padding: 5px;
+}
+.fairway-chevron-down {
+  position: absolute;
+  top: 105%;
+  right: 45%;
+  padding: 5px;
+}
+.fairway-chevron-left {
+  position: absolute;
+  top: 40%;
+  padding: 5px;
+  right: 78%;
+}
+.fairway-chevron-right {
+  position: absolute;
+  top: 40%;
+  padding: 5px;
+  left: 76%;
+}
+
+.newScore-green-container {
+  margin: 30% 0px;
+  position: relative;
+}
+
+.green-chevron-up {
+  position: absolute;
+  padding: 5px;
+  bottom: 105%;
+  right: 45%;
+}
+.green-chevron-down {
+  position: absolute;
+  padding: 5px;
+  top: 105%;
+  right: 45%;
+}
+.green-chevron-left {
+  position: absolute;
+  padding: 5px;
+  top: 40%;
+  right: 78%;
+}
+.green-chevron-right {
+  position: absolute;
+  padding: 5px;
+  top: 40%;
+  left: 76%;
+}
+
+.input-bunker-hit {
+  margin: 4% 0;
+}
+.input-putt-distance {
+  margin: 4% 0;
+}
+
+.input-number-of-putts {
+  margin: 4% 0;
+}
+
+.input-hole-score {
+  margin: 4% 0;
+}
