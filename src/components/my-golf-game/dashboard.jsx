@@ -1,19 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './dashboard.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./dashboard.css";
 
 const Dashboard = () => {
-  const user = JSON.parse(sessionStorage.getItem('user'));
+  const user = JSON.parse(sessionStorage.getItem("user"));
 
   return (
     <div className="my-golf-game-dashboard-container">
-      <Link to="/">Back</Link>
-      <Link to="/newScoreDetails">
-        <div className="my-golf-game-dashboard-card">Enter New Score</div>
-      </Link>
-      <Link>
-        <div className="my-golf-game-dashboard-card">Your Scores</div>
-      </Link>
+      <div className="my-golf-game-header">
+        <Link to="/">Back</Link>
+        <h1>My Golf Game</h1>
+        <Link to="/profile">Profile</Link>
+      </div>
+      <div className="my-golf-game-dashboard-card-container">
+        <Link to="/newScoreDetails" className="my-golf-game-dashboard-card">
+          Enter New Score
+        </Link>
+        <Link to="/yourScores" className="my-golf-game-dashboard-card">
+          Your Scores
+        </Link>
+        <Link to="/yourScores" className="my-golf-game-dashboard-card">
+          Your Stats from last 5 scores
+        </Link>
+        <Link to="/changeClubs" className="my-golf-game-dashboard-card">
+          Change Clubs
+        </Link>
+      </div>
     </div>
   );
 };
