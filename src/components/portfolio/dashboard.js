@@ -1,8 +1,8 @@
-import React from "react";
-import AboutMe from "./aboutMe";
-import Header from "./header";
-import Projects from "./projects";
-import "./dashboard.css";
+import React from 'react';
+import AboutMe from './aboutMe';
+import Header from './header';
+import Projects from './projects';
+import './dashboard.css';
 
 const Dashboard = () => {
   return (

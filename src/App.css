@@ -8,3 +8,11 @@ a:link {
 a:visited {
   text-decoration: none;
 }
+
+.dashboard-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #090934;
+}
