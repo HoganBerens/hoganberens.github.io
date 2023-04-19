@@ -16,7 +16,7 @@ const Dashboard = () => {
           Enter New Score
         </Link>
         <Link to="/yourScores" className="my-golf-game-dashboard-card">
-          Your Scores
+          Your Scores v2
         </Link>
         <Link to="/yourScores" className="my-golf-game-dashboard-card">
           Your Stats from last 5 scores

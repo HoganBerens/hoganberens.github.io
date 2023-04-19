@@ -16,7 +16,7 @@ const NewScore = () => {
   const [missedFairway, setMissedFairway] = useState(false);
   const [missedGreen, setMissedGreen] = useState(false);
   const [roundScore, setRoundScore] = useState([]);
-  const element = document.getElementById('holeTitle');
+  const [pageReloaded, setPageReloaded] = useState(false);
   let missedFairwayLieOptions = [
     'Rough',
     'Bunker',
@@ -61,7 +61,8 @@ const NewScore = () => {
 
     setRoundScore((roundScore) => [...roundScore, holeResults]);
 
-    element.scrollIntoView(true);
+    /* element.scrollIntoView(true); */
+    window.scrollTo(0, 0);
 
     clubHitOffTeeRef.current.value = '';
     fairwayHitRef.current = '';
@@ -75,6 +76,7 @@ const NewScore = () => {
     holeScoreRef.current.value = '';
 
     console.log(holeResults);
+    setPageReloaded(true);
   };
 
   let fairwayHitHandler = (event) => {
@@ -105,10 +107,8 @@ const NewScore = () => {
   }
 
   return (
-    <div className=" newScore-container container">
-      <h1 id="holeTitle" className="newScore-title">
-        Hole: {holeNumber}
-      </h1>
+    <div id="startOfElement" className=" newScore-container container">
+      <h1 className="newScore-title">Hole: {holeNumber}</h1>
       <form className="newScore-form" onSubmit={newScoreSubmitHandler}>
         <select ref={clubHitOffTeeRef} name="selectedClubOffTee">
           <option hidden={true} value="">

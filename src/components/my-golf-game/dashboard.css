@@ -36,9 +36,6 @@ a:visited {
   color: black;
 }
 
-a:hover {
-  box-shadow: 10px 10px rgba(70, 67, 61, 0.593);
-}
 @media screen and (max-width: 1450px) {
   .my-golf-game-dashboard-card {
   }
