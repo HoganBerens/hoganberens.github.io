@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './dashboard.css';
-import { user } from './utils';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./dashboard.css";
+import { user } from "./utils";
 
 const Dashboard = () => {
   return (
@@ -16,10 +16,10 @@ const Dashboard = () => {
           Enter New Score
         </Link>
         <Link to="/yourScores" className="my-golf-game-dashboard-card">
-          Your Scores v2
+          View Your Scores
         </Link>
         <Link to="/yourScores" className="my-golf-game-dashboard-card">
-          Your Stats from last 5 scores
+          Your average stats with all your rounds
         </Link>
         <Link to="/changeClubs" className="my-golf-game-dashboard-card">
           Change Clubs
