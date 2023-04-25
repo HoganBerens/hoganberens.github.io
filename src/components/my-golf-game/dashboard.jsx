@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./dashboard.css";
-import { user } from "./utils";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './dashboard.css';
 
 const Dashboard = () => {
   return (
@@ -18,12 +17,10 @@ const Dashboard = () => {
         <Link to="/yourScores" className="my-golf-game-dashboard-card">
           View Your Scores
         </Link>
-        <Link to="/yourScores" className="my-golf-game-dashboard-card">
-          Your average stats with all your rounds
-        </Link>
         <Link to="/changeClubs" className="my-golf-game-dashboard-card">
           Change Clubs
         </Link>
+        <div className="my-golf-game-dashboard-card"></div>
       </div>
     </div>
   );

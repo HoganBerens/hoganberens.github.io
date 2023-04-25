@@ -40,7 +40,7 @@ a:visited {
 
 @media screen and (max-width: 1450px) {
   .my-golf-game-dashboard-card {
-    height: 30%;
-    width: 40%;
+    height: 40%;
+    width: 30%;
   }
-} ;
+}

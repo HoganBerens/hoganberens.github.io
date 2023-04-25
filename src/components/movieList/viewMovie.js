@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { api_key, popular, imagePath, videoPath } from "./utils";
-import "./viewMovie.css";
-import { Link } from "react-router-dom";
-import Header from "./header";
+import React, { useEffect, useState } from 'react';
+import { api_key, popular, imagePath, videoPath } from './utils';
+import './viewMovie.css';
+import { Link } from 'react-router-dom';
+import Header from './header';
 
 const ViewMovie = () => {
   const [clickedMovie, setClickedMovie] = useState({});
@@ -14,18 +14,18 @@ const ViewMovie = () => {
       .then((response) => response.json())
       .then((data) => {
         let trailer = data.results.find(
-          (movie) => movie.name === "Official Trailer"
+          (movie) => movie.name === 'Official Trailer'
         );
 
-        window.open(`https://www.youtube.com/watch?v=${trailer.key}`, "_blank");
+        window.open(`https://www.youtube.com/watch?v=${trailer.key}`, '_blank');
       });
   };
 
   useEffect(() => {
     fetch(
       `${videoPath}${window.location.search.replace(
-        "?id=",
-        ""
+        '?id=',
+        ''
       )}?api_key=${api_key}&language=en-US`
     )
       .then((response) => response.json())
@@ -37,31 +37,31 @@ const ViewMovie = () => {
   return (
     <div>
       <Header />
-      <div className="wrapper">
+      <div className="viewMovie-wrapper">
         <img
           className="moviePoster"
           src={`${imagePath}${clickedMovie.poster_path}`}
         />
-        <div className="childrenWrapper">
+        <div className="viewMovie-childrenWrapper">
           <h1 className="view-movie-title">{clickedMovie.title}</h1>
-          <div className="description">
+          <div className="viewMovie-description">
             <b>Description: </b>
             {clickedMovie.overview}
           </div>
-          <div className="date">
+          <div className="viewMovie-date">
             <b>Release Date: </b>
             {clickedMovie.release_date}
           </div>
-          <div className="rating">
+          <div className="viewMovie-rating">
             <b>Rating: </b>
             {clickedMovie.vote_average}
           </div>
-          <div className="trailer" onClick={trailerHandler}>
+          <div className="viewMovie-trailer" onClick={trailerHandler}>
             Watch Trailer
           </div>
         </div>
       </div>
-      <Link className="backButton" to={`/movieList`}></Link>
+      <Link className="viewMovie-backButton" to={`/movieList`}></Link>
     </div>
   );
 };

@@ -1,8 +1,7 @@
-.wrapper {
+.viewMovie-wrapper {
   display: flex;
   flex-direction: column;
   background-color: #e6f5ff;
-  height: 100vh;
   width: 100vw;
   align-items: center;
 }
@@ -15,7 +14,7 @@
   min-height: 513px;
 }
 
-.childrenWrapper {
+.viewMovie-childrenWrapper {
   font-size: 20px;
   min-height: 390px;
   max-height: 400px;
@@ -25,18 +24,18 @@
   padding: 40px;
 }
 
-.description {
+.viewMovie-description {
   margin-bottom: 15px;
 }
 
-.date {
+.viewMovie-date {
   margin-bottom: 15px;
 }
-.rating {
+.viewMovie-rating {
   margin-bottom: 15px;
 }
 
-.backButton {
+.viewMovie-backButton {
   margin-left: 20px;
   position: absolute;
 
@@ -45,7 +44,7 @@
   font-size: 32px;
   text-decoration: none;
 }
-.trailer {
+.viewMovie-trailer {
   text-decoration: underline solid black;
   font-weight: bold;
 }
