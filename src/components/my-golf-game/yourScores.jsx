@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import './yourScores.css';
-import { scores } from './utils';
+import React, { useEffect } from "react";
+import "./yourScores.css";
+import { scores } from "./utils";
 
 const YourScores = () => {
-  let roundScore = scores[0];
+  /* let roundScore = scores[0];
   let firArray = [];
   let roundPlayed = [];
   let parForRound = [];
@@ -41,7 +41,7 @@ const YourScores = () => {
         ))}
       </div>
     </div>
-  );
+  ); */
 };
 
 export default YourScores;

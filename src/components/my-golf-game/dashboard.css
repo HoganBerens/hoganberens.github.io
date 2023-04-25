@@ -33,6 +33,15 @@
   align-items: center;
   border-radius: 6px;
 }
+.my-golf-game-dashboard-card-stats {
+  width: 80%;
+  background-color: azure;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  height: 30%;
+}
 
 a:visited {
   color: black;

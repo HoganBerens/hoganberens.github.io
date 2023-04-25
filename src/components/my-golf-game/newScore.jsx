@@ -1,16 +1,16 @@
-import React, { useRef, useState, useEffect } from 'react';
-import './newScore.css';
+import React, { useRef, useState, useEffect } from "react";
+import "./newScore.css";
 import {
   faChevronUp,
   faChevronDown,
   faChevronLeft,
   faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import greenPhoto from '../../assets/green.png';
-import fairwayPhoto from '../../assets/fairway.png';
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import greenPhoto from "../../assets/green.png";
+import fairwayPhoto from "../../assets/fairway.png";
 
-import { user, clubs } from './utils';
+import { user, clubs } from "./utils";
 
 const NewScore = () => {
   const [missedFairway, setMissedFairway] = useState(false);
@@ -18,31 +18,31 @@ const NewScore = () => {
   const [roundScore, setRoundScore] = useState([]);
   const [pageReloaded, setPageReloaded] = useState(false);
   let missedFairwayLieOptions = [
-    'Rough',
-    'Bunker',
-    'In trees',
-    'Hazard',
-    'Other',
+    "Rough",
+    "Bunker",
+    "In trees",
+    "Hazard",
+    "Other",
   ];
   let missedGreenLieOptions = [
-    'Fairway cut',
-    'Rough',
-    'Bunker',
-    'In trees',
-    'Hazard',
-    'Other',
+    "Fairway cut",
+    "Rough",
+    "Bunker",
+    "In trees",
+    "Hazard",
+    "Other",
   ];
 
-  let clubHitOffTeeRef = useRef('');
-  let fairwayHitRef = useRef('');
-  let missedFairwayLieRef = useRef('');
-  let apprDistanceRef = useRef('');
-  let apprClubRef = useRef('');
-  let greenHitRef = useRef('');
-  let missedGreenLieRef = useRef('');
-  let secondPuttDistanceRef = useRef('');
-  let numberOfPuttsRef = useRef('');
-  let holeScoreRef = useRef('');
+  let clubHitOffTeeRef = useRef("");
+  let fairwayHitRef = useRef("");
+  let missedFairwayLieRef = useRef("");
+  let apprDistanceRef = useRef("");
+  let apprClubRef = useRef("");
+  let greenHitRef = useRef("");
+  let missedGreenLieRef = useRef("");
+  let secondPuttDistanceRef = useRef("");
+  let numberOfPuttsRef = useRef("");
+  let holeScoreRef = useRef("");
 
   let newScoreSubmitHandler = (event) => {
     event.preventDefault();
@@ -64,16 +64,16 @@ const NewScore = () => {
     /* element.scrollIntoView(true); */
     window.scrollTo(0, 0);
 
-    clubHitOffTeeRef.current.value = '';
-    fairwayHitRef.current = '';
-    missedFairwayLieRef.current = '';
-    apprDistanceRef.current.value = '';
-    apprClubRef.current = '';
-    greenHitRef.current = '';
-    missedGreenLieRef.current = '';
-    secondPuttDistanceRef.current = '';
-    numberOfPuttsRef.current = '';
-    holeScoreRef.current.value = '';
+    clubHitOffTeeRef.current.value = "";
+    fairwayHitRef.current = "";
+    missedFairwayLieRef.current = "";
+    apprDistanceRef.current.value = "";
+    apprClubRef.current = "";
+    greenHitRef.current = "";
+    missedGreenLieRef.current = "";
+    secondPuttDistanceRef.current = "";
+    numberOfPuttsRef.current = "";
+    holeScoreRef.current.value = "";
 
     console.log(holeResults);
     setPageReloaded(true);
@@ -81,13 +81,13 @@ const NewScore = () => {
 
   let fairwayHitHandler = (event) => {
     fairwayHitRef.current = event.target.id;
-    fairwayHitRef.current !== 'fairway'
+    fairwayHitRef.current !== "fairway"
       ? setMissedFairway(true)
       : setMissedFairway(false);
   };
   let greenHitHandler = (event) => {
     greenHitRef.current = event.target.id;
-    greenHitRef.current !== 'green'
+    greenHitRef.current !== "green"
       ? setMissedGreen(true)
       : setMissedGreen(false);
   };
@@ -100,7 +100,7 @@ const NewScore = () => {
     missedGreenLieRef.current = event.target.value;
   };
 
-  let holeNumber = '';
+  let holeNumber = "";
 
   for (let i = 0; i <= roundScore.length; i++) {
     holeNumber = i + 1;
@@ -118,38 +118,42 @@ const NewScore = () => {
             <option key={index}>{club}</option>
           ))}
         </select>
-        <div>Where did you tee shot go?</div>
-        <div className="newScore-fairway-container">
-          <img
-            onClick={fairwayHitHandler}
-            className="fairway-photo "
-            id="fairway"
-            src={fairwayPhoto}
-          />
-          <FontAwesomeIcon
-            onClick={fairwayHitHandler}
-            icon={faChevronUp}
-            id="up"
-            className=" fairway-chevron-up fa-3x"
-          />
-          <FontAwesomeIcon
-            onClick={fairwayHitHandler}
-            id="right"
-            icon={faChevronRight}
-            className=" fairway-chevron-right  fa-3x"
-          />
-          <FontAwesomeIcon
-            onClick={fairwayHitHandler}
-            id="down"
-            icon={faChevronDown}
-            className=" fairway-chevron-down fa-3x"
-          />
-          <FontAwesomeIcon
-            onClick={fairwayHitHandler}
-            id="left"
-            icon={faChevronLeft}
-            className=" fairway-chevron-left fa-3x"
-          />
+        <div className="newScore-fairway-text-wrapper">
+          <div className="newScore-fairway-title">
+            Where did your tee shot go?
+          </div>
+          <div className="newScore-fairway-container">
+            <img
+              onClick={fairwayHitHandler}
+              className="fairway-photo "
+              id="fairway"
+              src={fairwayPhoto}
+            />
+            <FontAwesomeIcon
+              onClick={fairwayHitHandler}
+              icon={faChevronUp}
+              id="up"
+              className=" fairway-chevron-up fa-3x"
+            />
+            <FontAwesomeIcon
+              onClick={fairwayHitHandler}
+              id="right"
+              icon={faChevronRight}
+              className=" fairway-chevron-right  fa-3x"
+            />
+            <FontAwesomeIcon
+              onClick={fairwayHitHandler}
+              id="down"
+              icon={faChevronDown}
+              className=" fairway-chevron-down fa-3x"
+            />
+            <FontAwesomeIcon
+              onClick={fairwayHitHandler}
+              id="left"
+              icon={faChevronLeft}
+              className=" fairway-chevron-left fa-3x"
+            />
+          </div>
         </div>
         {missedFairway ? (
           <select onChange={missedFairwayLieSelectHandler}>

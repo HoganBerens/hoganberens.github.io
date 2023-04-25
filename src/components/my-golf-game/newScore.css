@@ -8,17 +8,30 @@
 }
 .newScore-title {
   margin-top: 10%;
+  margin-bottom: 5%;
+  text-align: center;
 }
 
 .newScore-form {
   display: flex;
   flex-direction: column;
-  position: relative;
+}
+.newScore-fairway-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.newScore-fairway-title {
+  font-size: 30px;
+  margin-bottom: 10%;
 }
 
 .newScore-fairway-container {
   position: relative;
-  margin: 35% 0px;
 }
 
 img {

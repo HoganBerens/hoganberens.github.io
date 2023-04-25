@@ -1,6 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './dashboard.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./dashboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 const Dashboard = () => {
   return (
@@ -8,7 +10,9 @@ const Dashboard = () => {
       <div className="my-golf-game-header">
         <Link to="/">Back</Link>
         <h1>My Golf Game</h1>
-        <Link to="/profile">Profile</Link>
+        <Link to="/profile">
+          <FontAwesomeIcon className="fa-xl" icon={faUser} />
+        </Link>
       </div>
       <div className="my-golf-game-dashboard-card-container">
         <Link to="/newScore" className="my-golf-game-dashboard-card">
@@ -20,7 +24,9 @@ const Dashboard = () => {
         <Link to="/changeClubs" className="my-golf-game-dashboard-card">
           Change Clubs
         </Link>
-        <div className="my-golf-game-dashboard-card"></div>
+        <div className="my-golf-game-dashboard-card-stats">
+          Your stats for the last three rounds
+        </div>
       </div>
     </div>
   );
