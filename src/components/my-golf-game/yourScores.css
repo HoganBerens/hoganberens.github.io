@@ -13,6 +13,23 @@
   padding: 20px;
 }
 
+.yourScores-round-results-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.yourScores-round-values-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.yourScores-course-values-wrapper {
+}
+
+.yourScores-hole-value {
+  flex: 1 1 auto;
+}
+
 .yourScores-courseAndScores-wrapper {
   max-width: 80%;
   max-height: 80%;
