@@ -1,48 +1,49 @@
-import React, { useRef, useState, useEffect } from "react";
-import "./newScore.css";
+import React, { useRef, useState, useEffect } from 'react';
+import './newScore.css';
 import {
   faChevronUp,
   faChevronDown,
   faChevronLeft,
   faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import greenPhoto from "../../assets/green.png";
-import fairwayPhoto from "../../assets/fairway.png";
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import greenPhoto from '../../assets/green.png';
+import fairwayPhoto from '../../assets/fairway.png';
 
-import { user, clubs } from "./utils";
+import { user, clubs } from './utils';
 
 const NewScore = () => {
   const [missedFairway, setMissedFairway] = useState(false);
   const [missedGreen, setMissedGreen] = useState(false);
   const [roundScore, setRoundScore] = useState([]);
   const [pageReloaded, setPageReloaded] = useState(false);
+
   let missedFairwayLieOptions = [
-    "Rough",
-    "Bunker",
-    "In trees",
-    "Hazard",
-    "Other",
+    'Rough',
+    'Bunker',
+    'In trees',
+    'Hazard',
+    'Other',
   ];
   let missedGreenLieOptions = [
-    "Fairway cut",
-    "Rough",
-    "Bunker",
-    "In trees",
-    "Hazard",
-    "Other",
+    'Fairway cut',
+    'Rough',
+    'Bunker',
+    'In trees',
+    'Hazard',
+    'Other',
   ];
 
-  let clubHitOffTeeRef = useRef("");
-  let fairwayHitRef = useRef("");
-  let missedFairwayLieRef = useRef("");
-  let apprDistanceRef = useRef("");
-  let apprClubRef = useRef("");
-  let greenHitRef = useRef("");
-  let missedGreenLieRef = useRef("");
-  let secondPuttDistanceRef = useRef("");
-  let numberOfPuttsRef = useRef("");
-  let holeScoreRef = useRef("");
+  let clubHitOffTeeRef = useRef('');
+  let fairwayHitRef = useRef('');
+  let missedFairwayLieRef = useRef('');
+  let apprDistanceRef = useRef('');
+  let apprClubRef = useRef('');
+  let greenHitRef = useRef('');
+  let missedGreenLieRef = useRef('');
+  let secondPuttDistanceRef = useRef('');
+  let numberOfPuttsRef = useRef('');
+  let holeScoreRef = useRef('');
 
   let newScoreSubmitHandler = (event) => {
     event.preventDefault();
@@ -61,19 +62,16 @@ const NewScore = () => {
 
     setRoundScore((roundScore) => [...roundScore, holeResults]);
 
-    /* element.scrollIntoView(true); */
-    window.scrollTo(0, 0);
-
-    clubHitOffTeeRef.current.value = "";
-    fairwayHitRef.current = "";
-    missedFairwayLieRef.current = "";
-    apprDistanceRef.current.value = "";
-    apprClubRef.current = "";
-    greenHitRef.current = "";
-    missedGreenLieRef.current = "";
-    secondPuttDistanceRef.current = "";
-    numberOfPuttsRef.current = "";
-    holeScoreRef.current.value = "";
+    clubHitOffTeeRef.current.value = '';
+    fairwayHitRef.current = '';
+    missedFairwayLieRef.current = '';
+    apprDistanceRef.current.value = '';
+    apprClubRef.current = '';
+    greenHitRef.current = '';
+    missedGreenLieRef.current = '';
+    secondPuttDistanceRef.current = '';
+    numberOfPuttsRef.current = '';
+    holeScoreRef.current.value = '';
 
     console.log(holeResults);
     setPageReloaded(true);
@@ -81,13 +79,13 @@ const NewScore = () => {
 
   let fairwayHitHandler = (event) => {
     fairwayHitRef.current = event.target.id;
-    fairwayHitRef.current !== "fairway"
+    fairwayHitRef.current !== 'fairway'
       ? setMissedFairway(true)
       : setMissedFairway(false);
   };
   let greenHitHandler = (event) => {
     greenHitRef.current = event.target.id;
-    greenHitRef.current !== "green"
+    greenHitRef.current !== 'green'
       ? setMissedGreen(true)
       : setMissedGreen(false);
   };
@@ -100,17 +98,25 @@ const NewScore = () => {
     missedGreenLieRef.current = event.target.value;
   };
 
-  let holeNumber = "";
+  let holeNumber = '';
 
   for (let i = 0; i <= roundScore.length; i++) {
     holeNumber = i + 1;
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageReloaded]);
+
   return (
-    <div id="startOfElement" className=" newScore-container container">
+    <div id="startOfElement" className=" newScore-container ">
       <h1 className="newScore-title">Hole: {holeNumber}</h1>
       <form className="newScore-form" onSubmit={newScoreSubmitHandler}>
-        <select ref={clubHitOffTeeRef} name="selectedClubOffTee">
+        <select
+          className="newScore-select"
+          ref={clubHitOffTeeRef}
+          name="selectedClubOffTee"
+        >
           <option hidden={true} value="">
             Select the club you hit off the tee
           </option>
@@ -126,24 +132,24 @@ const NewScore = () => {
             <img
               onClick={fairwayHitHandler}
               className="fairway-photo "
-              id="fairway"
+              id="Faiway"
               src={fairwayPhoto}
             />
             <FontAwesomeIcon
               onClick={fairwayHitHandler}
               icon={faChevronUp}
-              id="up"
+              id="Long"
               className=" fairway-chevron-up fa-3x"
             />
             <FontAwesomeIcon
               onClick={fairwayHitHandler}
-              id="right"
+              id="Right"
               icon={faChevronRight}
               className=" fairway-chevron-right  fa-3x"
             />
             <FontAwesomeIcon
               onClick={fairwayHitHandler}
-              id="down"
+              id="Short"
               icon={faChevronDown}
               className=" fairway-chevron-down fa-3x"
             />
@@ -175,14 +181,16 @@ const NewScore = () => {
           type="text"
           ref={apprDistanceRef}
         />
-        <select>
-          <option hidden={true}>What club are you hitting?</option>
-          {clubs.map((club, index) => (
-            <option ref={apprClubRef} key={index}>
-              {club}
-            </option>
-          ))}
-        </select>
+        <div className="newScore-appr-wrapper">
+          <select>
+            <option hidden={true}>What club are you hitting?</option>
+            {clubs.map((club, index) => (
+              <option ref={apprClubRef} key={index}>
+                {club}
+              </option>
+            ))}
+          </select>
+        </div>
         <div>Where did your approach shot go?</div>
         <div className="newScore-green-container">
           <img

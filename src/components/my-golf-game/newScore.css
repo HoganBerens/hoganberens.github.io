@@ -1,8 +1,7 @@
 .newScore-container {
   height: 100vh;
-  width: 100vw;
   overflow: scroll;
-  max-width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
   background-color: #e6e5d4;
 }
@@ -15,23 +14,29 @@
 .newScore-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .newScore-fairway-text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
-  width: 100vw;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin: 10% 0;
 }
 .newScore-fairway-title {
   font-size: 30px;
-  margin-bottom: 10%;
+}
+.newScore-select {
+  width: 60vw;
 }
 
 .newScore-fairway-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20% 0px;
+}
+
+.newScore-appr-wrapper {
 }
 
 img {
@@ -65,8 +70,10 @@ img {
 }
 
 .newScore-green-container {
-  margin: 30% 0px;
+  margin: 10% 0px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .green-chevron-up {
