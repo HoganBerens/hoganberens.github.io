@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import YourStats from "./yourStats";
 
 const Dashboard = () => {
   return (
@@ -25,7 +26,7 @@ const Dashboard = () => {
           Change Clubs
         </Link>
         <div className="my-golf-game-dashboard-card-stats">
-          Your stats for the last three rounds
+          <YourStats />
         </div>
       </div>
     </div>
