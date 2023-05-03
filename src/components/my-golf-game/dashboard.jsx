@@ -9,24 +9,48 @@ const Dashboard = () => {
   return (
     <div className="my-golf-game-dashboard-container">
       <div className="my-golf-game-header">
-        <Link to="/">Back</Link>
-        <h1>My Golf Game</h1>
-        <Link to="/profile">
-          <FontAwesomeIcon className="fa-xl" icon={faUser} />
-        </Link>
+        <div className="d-flex container">
+          <div className="flex-auto">
+            <Link className="golf-header-link" to="/">
+              Back
+            </Link>
+          </div>
+          <h1 className="flex-auto header-title">My Golf Game</h1>
+          <div className="flex-auto header-profile-wrapper">
+            <FontAwesomeIcon
+              onClick={() => {
+                window.location = "/profile";
+              }}
+              className="fa-xl golf-header-link header-profile"
+              icon={faUser}
+            />
+          </div>
+        </div>
       </div>
-      <div className="my-golf-game-dashboard-card-container">
-        <Link to="/newScore" className="my-golf-game-dashboard-card">
-          Enter New Score
-        </Link>
-        <Link to="/yourScores" className="my-golf-game-dashboard-card">
-          View Your Scores
-        </Link>
-        <Link to="/changeClubs" className="my-golf-game-dashboard-card">
-          Change Clubs
-        </Link>
-        <div className="my-golf-game-dashboard-card-stats">
-          <YourStats />
+      <div className="container">
+        <div className="py-5 row gx-5">
+          <div className="col-md-4">
+            <Link to="/newScore" className="my-golf-game-dashboard-card">
+              Enter New Score
+            </Link>
+          </div>
+          <div className="col-md-4">
+            <Link to="/yourScores" className="my-golf-game-dashboard-card">
+              View Your Scores
+            </Link>
+          </div>
+          <div className="col-md-4">
+            <Link to="/changeClubs" className="my-golf-game-dashboard-card">
+              Change Clubs
+            </Link>
+          </div>
+        </div>
+        <div className="py-5 row gx-5">
+          <div className="col-12">
+            <div className="my-golf-game-dashboard-card-stats">
+              <YourStats />
+            </div>
+          </div>
         </div>
       </div>
     </div>

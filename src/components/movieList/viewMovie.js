@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { api_key, popular, imagePath, videoPath } from './utils';
-import './viewMovie.css';
-import { Link } from 'react-router-dom';
-import Header from './header';
+import React, { useEffect, useState } from "react";
+import { api_key, popular, imagePath, videoPath } from "./utils";
+import "./viewMovie.css";
+import { Link } from "react-router-dom";
+import Header from "./header";
 
 const ViewMovie = () => {
   const [clickedMovie, setClickedMovie] = useState({});
@@ -14,18 +14,18 @@ const ViewMovie = () => {
       .then((response) => response.json())
       .then((data) => {
         let trailer = data.results.find(
-          (movie) => movie.name === 'Official Trailer'
+          (movie) => movie.name === "Official Trailer"
         );
 
-        window.open(`https://www.youtube.com/watch?v=${trailer.key}`, '_blank');
+        window.open(`https://www.youtube.com/watch?v=${trailer.key}`, "_blank");
       });
   };
 
   useEffect(() => {
     fetch(
       `${videoPath}${window.location.search.replace(
-        '?id=',
-        ''
+        "?id=",
+        ""
       )}?api_key=${api_key}&language=en-US`
     )
       .then((response) => response.json())
@@ -35,7 +35,7 @@ const ViewMovie = () => {
       });
   }, []);
   return (
-    <div>
+    <div className="view-movie-container">
       <Header />
       <div className="viewMovie-wrapper">
         <img

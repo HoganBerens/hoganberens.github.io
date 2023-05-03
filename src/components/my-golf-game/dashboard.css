@@ -1,6 +1,5 @@
 .my-golf-game-dashboard-container {
   height: 100vh;
-  width: 100vw;
   background-color: #7395ae;
 }
 
@@ -8,39 +7,70 @@
   display: flex;
   flex-direction: row;
   height: 10%;
-  width: 100vw;
-  padding: 10px;
   justify-content: space-between;
+  background-color: #037cb7;
+}
+
+.d-flex {
+  align-items: center;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.golf-header-link {
+  cursor: pointer;
+}
+
+.golf-header-link:hover {
+  color: white;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+}
+
+.header-profile-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-profile {
+  font-size: 32px;
 }
 
 .my-golf-game-dashboard-card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 100vw;
   align-items: center;
   flex-wrap: wrap;
-  overflow-x: hidden;
   height: 90vh;
-  padding: 20px;
 }
+
+.golf-card-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+}
+
 .my-golf-game-dashboard-card {
   background-color: azure;
   display: flex;
-  height: 30%;
-  width: 30%;
+  height: 160px;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
+  flex: 1 1 auto;
 }
 .my-golf-game-dashboard-card-stats {
-  width: 80%;
   background-color: azure;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
   display: flex;
-  height: 30%;
+  height: 480px;
 }
 
 a:visited {
@@ -50,6 +80,5 @@ a:visited {
 @media screen and (max-width: 1450px) {
   .my-golf-game-dashboard-card {
     height: 40%;
-    width: 30%;
   }
 }
