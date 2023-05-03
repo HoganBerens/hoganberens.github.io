@@ -25,9 +25,8 @@ const Dashboard = () => {
         <Link to="/changeClubs" className="my-golf-game-dashboard-card">
           Change Clubs
         </Link>
-        <div className="my-golf-game-dashboard-card-stats">
-          <YourStats />
-        </div>
+
+        <YourStats />
       </div>
     </div>
   );

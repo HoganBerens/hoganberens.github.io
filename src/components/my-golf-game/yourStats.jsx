@@ -9,19 +9,48 @@ const YourStats = () => {
   let secondScoreBack = scores[1][1];
   let thirdScoreFront = scores[2][0];
   let thirdScoreBack = scores[2][1];
-  let allScores = [
-    firstScoreBack,
-    firstScoreFront,
-    secondScoreBack,
-    secondScoreFront,
-    thirdScoreBack,
-    thirdScoreFront,
-  ];
+  let allFIRs = [];
+
+  for (let i = 0; i <= scores.length; i++) {}
+
+  for (let i = 0; i <= 8; i++) {
+    thirdScoreBack[i].Par != 3
+      ? thirdScoreBack[i].FIR
+        ? allFIRs.push(1)
+        : allFIRs.push(0)
+      : console.log("no FIR");
+    thirdScoreFront[i].Par != 3
+      ? thirdScoreFront[i].FIR
+        ? allFIRs.push(1)
+        : allFIRs.push(0)
+      : console.log("no FIR");
+    secondScoreBack[i].Par != 3
+      ? secondScoreBack[i].FIR
+        ? allFIRs.push(1)
+        : allFIRs.push(0)
+      : console.log("no FIR");
+    secondScoreFront[i].Par != 3
+      ? secondScoreFront[i].FIR
+        ? allFIRs.push(1)
+        : allFIRs.push(0)
+      : console.log("no FIR");
+    firstScoreBack[i].Par != 3
+      ? firstScoreBack[i].FIR
+        ? allFIRs.push(1)
+        : allFIRs.push(0)
+      : console.log("no FIR");
+    firstScoreFront[i].Par != 3
+      ? firstScoreFront[i].FIR
+        ? allFIRs.push(1)
+        : allFIRs.push(0)
+      : console.log("no FIR");
+  }
 
   return (
-    <div>
-      <div>{console.log(allScores[0][4].FIR)}</div>
-      <div>{allScores[0][3].FIR}</div>
+    <div className="yourStats-wrapper">
+      {console.log(scores)}
+      <div className="yourStats-FIR-wrapper">FIR pie chart</div>
+      <div className="yourStats-Gir-wrapper">Gir pie chart</div>
     </div>
   );
 };
