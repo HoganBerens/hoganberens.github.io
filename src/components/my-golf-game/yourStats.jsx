@@ -24,13 +24,13 @@ const YourStats = () => {
 
   return (
     <div className="yourStats-wrapper row ">
-      <div className="yourStats-FIR-wrapper col-md-4 ">
+      <div className="yourStats-FIR-wrapper col-md-6 ">
         <div>
           {hitFIR} / {totalFairways} Fairways Hit
         </div>
         <div>{(hitFIR / totalFairways) * 100}%</div>
       </div>
-      <div className="yourStats-Gir-wrapper col-md-4 ">
+      <div className="yourStats-Gir-wrapper col-md-6 ">
         <div>
           {hitGIR} / {totalGreens}
         </div>
