@@ -43,7 +43,7 @@ link {
   display: flex;
   margin-right: 10px;
 
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .results-wrapper {
