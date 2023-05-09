@@ -1,14 +1,18 @@
 .newScore-container {
-  height: 100vh;
-  overflow: scroll;
-  max-width: 100vw;
-  overflow-x: hidden;
   background-color: antiquewhite;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 .newScore-title {
-  margin-top: 10%;
-  margin-bottom: 5%;
-  text-align: center;
+  font-size: 50px;
+}
+.newScore-select {
+  font-size: 20px;
+  margin: 20px 0;
 }
 
 .newScore-form {
@@ -18,100 +22,50 @@
 }
 .newScore-fairway-text-wrapper {
   display: flex;
+  margin: 20px 0;
   flex-direction: column;
-  align-items: center;
-  margin: 10% 0;
 }
 .newScore-fairway-title {
-  font-size: 30px;
-}
-.newScore-select {
-  width: 60vw;
+  font-size: 20px;
 }
 
 .newScore-fairway-container {
-  position: relative;
+  flex: 1 1 auto;
+  font-size: 20px;
   display: flex;
-  justify-content: center;
-  margin: 20% 0px;
+  align-items: center;
+  justify-content: space-around;
+}
+.newScore-fairway-hit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.newScore-fairway-missed {
+  flex: 1 1 auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  border-left: 1px solid black;
 }
 
+.newScore-arrows-wrapper {
+  display: flex;
+}
+.newScore-missedFaiway-select {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.fairway-green-input {
+  flex: 1 1 auto;
+}
 .newScore-appr-wrapper {
 }
-
-img {
-  height: 40%;
-  width: 40%;
+.newScore-appr-select {
+  font-size: 20px;
+  margin: 20px 0;
 }
-
-.fairway-chevron-up {
-  position: absolute;
-  bottom: 105%;
-  right: 45%;
-  padding: 5px;
-}
-.fairway-chevron-down {
-  position: absolute;
-  top: 105%;
-  right: 45%;
-  padding: 5px;
-}
-.fairway-chevron-left {
-  position: absolute;
-  top: 40%;
-  padding: 5px;
-  right: 78%;
-}
-.fairway-chevron-right {
-  position: absolute;
-  top: 40%;
-  padding: 5px;
-  left: 76%;
-}
-
-.newScore-green-container {
-  margin: 10% 0px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.green-chevron-up {
-  position: absolute;
-  padding: 5px;
-  bottom: 105%;
-  right: 45%;
-}
-.green-chevron-down {
-  position: absolute;
-  padding: 5px;
-  top: 105%;
-  right: 45%;
-}
-.green-chevron-left {
-  position: absolute;
-  padding: 5px;
-  top: 40%;
-  right: 78%;
-}
-.green-chevron-right {
-  position: absolute;
-  padding: 5px;
-  top: 40%;
-  left: 76%;
-}
-
-.input-bunker-hit {
-  margin: 4% 0;
-}
-.input-putt-distance {
-  margin: 4% 0;
-}
-
-.input-number-of-putts {
-  margin: 4% 0;
-}
-
-.input-hole-score {
-  margin: 4% 0;
+.newScore-form-input {
+  margin: 20px 0;
 }

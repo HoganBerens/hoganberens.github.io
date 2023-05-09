@@ -1,21 +1,21 @@
-import React from "react";
-import "./yourScores.css";
-import { scores, course } from "./utils";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import './yourScores.css';
+import { scores, course } from './utils';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUser,
   faCheckCircle,
   faTimesCircle,
-} from "@fortawesome/free-regular-svg-icons";
-import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-regular-svg-icons';
+import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 
 const YourScores = () => {
   let allHoles = course.Holes;
   let score = scores[0];
 
   return (
-    <div className="yourScores-wrapper">
+    <div className="yourScores-wrapper container">
       <div className="yourScores-header">
         <Link to="/my-golf-game">Back</Link>
         <div className="yourScores-header-title">Your Scores</div>
@@ -23,20 +23,20 @@ const YourScores = () => {
           <FontAwesomeIcon className="fa-xl" icon={faUser} />
         </Link>
       </div>
-      <div className="yourScores-round-results-wrapper container">
+      <div className="yourScores-round-results-wrapper ">
         {scores.map((score) => (
           <div className="d-flex">
             <div className="yourScores-round-values-wrapper">
               <div className="yourScores-course-values-wrapper">
                 {[
-                  "Hole:",
-                  "Yards:",
-                  "Par:",
-                  "Score:",
-                  "FIR:",
-                  "Appr:",
-                  "GIR:",
-                  "Putts:",
+                  'Hole:',
+                  'Yards:',
+                  'Par:',
+                  'Score:',
+                  'FIR:',
+                  'Appr:',
+                  'GIR:',
+                  'Putts:',
                 ].map((value) => (
                   <div className="cell">{value}</div>
                 ))}
@@ -59,10 +59,10 @@ const YourScores = () => {
                     <FontAwesomeIcon
                       className={`cell cell-icon ${
                         hole.FIR
-                          ? "green-check"
+                          ? 'green-check'
                           : hole.Par !== 3
-                          ? "red-x"
-                          : "gray-minus"
+                          ? 'red-x'
+                          : 'gray-minus'
                       }`}
                       icon={
                         hole.FIR
@@ -72,14 +72,14 @@ const YourScores = () => {
                           : faMinusCircle
                       }
                     >
-                      {!hole.FIR && hole.Par === 3 ? "-" : null}
+                      {!hole.FIR && hole.Par === 3 ? '-' : null}
                     </FontAwesomeIcon>
                     <div className="cell">
-                      {hole.apprDistance ? hole.apprDistance : "-"}
+                      {hole.apprDistance ? hole.apprDistance : '-'}
                     </div>
                     <FontAwesomeIcon
                       className={`cell cell-icon ${
-                        hole.GIR ? "green-check" : "red-x"
+                        hole.GIR ? 'green-check' : 'red-x'
                       }`}
                       icon={hole.GIR ? faCheckCircle : faTimesCircle}
                     />

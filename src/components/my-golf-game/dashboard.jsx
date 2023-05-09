@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./dashboard.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import YourStats from "./yourStats";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './dashboard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import YourStats from './yourStats';
 
 const Dashboard = () => {
   return (
@@ -19,7 +19,7 @@ const Dashboard = () => {
           <div className="flex-auto header-profile-wrapper">
             <FontAwesomeIcon
               onClick={() => {
-                window.location = "/profile";
+                window.location = '/profile';
               }}
               className="fa-xl golf-header-link header-profile"
               icon={faUser}
