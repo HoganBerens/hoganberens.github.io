@@ -1,5 +1,4 @@
 .view-movie-container {
-  height: 100vh;
 }
 
 .viewMovie-wrapper {
@@ -7,8 +6,8 @@
   flex-direction: column;
   background-color: #e6f5ff;
   width: 100vw;
-  align-items: center;
-  height: calc(100vh - 60px);
+  align-items: center; /* 
+  height: calc(100vh - 60px); */
 }
 
 .moviePoster {

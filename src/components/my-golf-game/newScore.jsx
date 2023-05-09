@@ -1,16 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './newScore.css';
-import {
-  faChevronUp,
-  faChevronDown,
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import greenPhoto from '../../assets/green.png';
-import fairwayPhoto from '../../assets/fairway.png';
-
-import { user, clubs } from './utils';
+import { user, clubs, course } from './utils';
+import {
+  faCheckCircle,
+  faCircleArrowDown,
+  faCircleArrowUp,
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 const NewScore = () => {
   const [missedFairway, setMissedFairway] = useState(false);
@@ -72,9 +70,6 @@ const NewScore = () => {
     secondPuttDistanceRef.current = '';
     numberOfPuttsRef.current = '';
     holeScoreRef.current.value = '';
-
-    console.log(holeResults);
-    setPageReloaded(true);
   };
 
   let fairwayHitHandler = (event) => {
@@ -104,13 +99,11 @@ const NewScore = () => {
     holeNumber = i + 1;
   }
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pageReloaded]);
-
   return (
-    <div id="startOfElement" className=" newScore-container ">
-      <h1 className="newScore-title">Hole: {holeNumber}</h1>
+    <div className=" newScore-container ">
+      <h1 id="startOfElement" className="newScore-title">
+        Hole: {holeNumber}
+      </h1>
       <form className="newScore-form" onSubmit={newScoreSubmitHandler}>
         <select
           className="newScore-select"
@@ -129,36 +122,42 @@ const NewScore = () => {
             Where did your tee shot go?
           </div>
           <div className="newScore-fairway-container">
-            <img
-              onClick={fairwayHitHandler}
-              className="fairway-photo "
-              id="Faiway"
-              src={fairwayPhoto}
-            />
-            <FontAwesomeIcon
-              onClick={fairwayHitHandler}
-              icon={faChevronUp}
-              id="Long"
-              className=" fairway-chevron-up fa-3x"
-            />
-            <FontAwesomeIcon
-              onClick={fairwayHitHandler}
-              id="Right"
-              icon={faChevronRight}
-              className=" fairway-chevron-right  fa-3x"
-            />
-            <FontAwesomeIcon
-              onClick={fairwayHitHandler}
-              id="Short"
-              icon={faChevronDown}
-              className=" fairway-chevron-down fa-3x"
-            />
-            <FontAwesomeIcon
-              onClick={fairwayHitHandler}
-              id="left"
-              icon={faChevronLeft}
-              className=" fairway-chevron-left fa-3x"
-            />
+            <div className="newScore-fairway-hit">
+              <div>FIR</div>
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                onClick={fairwayHitHandler}
+                className="fairway-photo "
+                id="Faiway"
+              />
+            </div>
+            <div className="newScore-fairway-missed">
+              <div>Missed Fairway</div>
+              <FontAwesomeIcon
+                onClick={fairwayHitHandler}
+                id="left"
+                icon={faCircleArrowLeft}
+                className="fairway-green-input"
+              />
+              <FontAwesomeIcon
+                onClick={fairwayHitHandler}
+                id="Right"
+                icon={faCircleArrowRight}
+                className="fairway-green-input"
+              />
+              <FontAwesomeIcon
+                onClick={fairwayHitHandler}
+                id="Short"
+                icon={faCircleArrowDown}
+                className="fairway-green-input"
+              />
+              <FontAwesomeIcon
+                onClick={fairwayHitHandler}
+                icon={faCircleArrowUp}
+                id="Long"
+                className="fairway-green-input"
+              />
+            </div>
           </div>
         </div>
         {missedFairway ? (
@@ -193,36 +192,42 @@ const NewScore = () => {
         </div>
         <div>Where did your approach shot go?</div>
         <div className="newScore-green-container">
-          <img
-            onClick={greenHitHandler}
-            id="green"
-            className=" green-photo "
-            src={greenPhoto}
-          />
-          <FontAwesomeIcon
-            id="long"
-            onClick={greenHitHandler}
-            icon={faChevronUp}
-            className=" green-chevron-up fa-3x"
-          />
-          <FontAwesomeIcon
-            id="right"
-            onClick={greenHitHandler}
-            icon={faChevronRight}
-            className=" green-chevron-right  fa-3x"
-          />
-          <FontAwesomeIcon
-            id="short"
-            onClick={greenHitHandler}
-            icon={faChevronDown}
-            className=" green-chevron-down fa-3x"
-          />
-          <FontAwesomeIcon
-            id="left"
-            onClick={greenHitHandler}
-            icon={faChevronLeft}
-            className=" green-chevron-left fa-3x"
-          />
+          <div className="newScore-green-hit">
+            <div>GIR</div>
+            <FontAwesomeIcon
+              icon={faCheckCircle}
+              onClick={greenHitHandler}
+              id="green"
+              className=" green-photo "
+            />
+          </div>
+          <div className="newScore-green-missed">
+            <div>Missed Green</div>
+            <FontAwesomeIcon
+              id="left"
+              onClick={greenHitHandler}
+              icon={faCircleArrowLeft}
+              className="fairway-green-input"
+            />
+            <FontAwesomeIcon
+              id="right"
+              onClick={greenHitHandler}
+              icon={faCircleArrowRight}
+              className="fairway-green-input"
+            />
+            <FontAwesomeIcon
+              id="short"
+              onClick={greenHitHandler}
+              icon={faCircleArrowDown}
+              className="fairway-green-input"
+            />
+            <FontAwesomeIcon
+              id="long"
+              onClick={greenHitHandler}
+              icon={faCircleArrowUp}
+              className=" fairway-green-input"
+            />
+          </div>
         </div>
         {missedGreen ? (
           <select onChange={missedGreenSelectHandler}>
