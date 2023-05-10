@@ -1,7 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "./newScore.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { user, clubs, course } from "./utils";
+import { user, clubs } from "./utils";
+import Header from "./header";
 import {
   faCheckCircle,
   faCircleArrowDown,
@@ -100,6 +101,7 @@ const NewScore = () => {
 
   return (
     <div className=" newScore-container ">
+      <Header />
       <div className="newScore-form-container container">
         <div id="startOfElement" className="newScore-title row ">
           Hole: {holeNumber}
