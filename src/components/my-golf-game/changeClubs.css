@@ -1,0 +1,23 @@
+.changeClubs-container {
+  background-color: #7395ae;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.changeClubs-content-wrapper {
+}
+.changeClubs-map-container {
+  display: flex;
+  align-items: center;
+}
+
+.changeClubs-clubs-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background-color: aqua;
+}
+.changeClubs-clubs {
+  flex: 1 1 auto;
+}
