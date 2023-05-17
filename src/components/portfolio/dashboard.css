@@ -1,9 +1,9 @@
 .dashboard {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #090934;
+  position: relative;
 }
 
 .dashboard-border-wrapper {
@@ -73,6 +73,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  top: 40px;
+  left: 40px;
 }
 @media screen and (max-width: 1450px) {
   .dashboard-box-wrapper {
