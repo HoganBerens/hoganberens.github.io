@@ -6,18 +6,25 @@
 }
 
 .changeClubs-content-wrapper {
-}
-.changeClubs-map-container {
   display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+.changeClubs-clubs-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.changeClubs-club-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
   align-items: center;
 }
 
-.changeClubs-clubs-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  background-color: aqua;
-}
 .changeClubs-clubs {
   flex: 1 1 auto;
+}
+.changeClubs-club-name {
 }
