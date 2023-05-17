@@ -10,7 +10,7 @@
 }
 .newScore-select {
   font-size: 20px;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .newScore-form {
@@ -20,7 +20,7 @@
 }
 .newScore-fairway-text-wrapper {
   display: flex;
-  margin: 20px 0;
+  margin: 40px 0;
   flex-direction: column;
 }
 .newScore-fairway-title {
@@ -53,7 +53,7 @@
 }
 .newScore-missedFaiway-select {
   font-size: 20px;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 .fairway-green-input {
   flex: 1 1 auto;
@@ -62,8 +62,8 @@
 }
 .newScore-appr-select {
   font-size: 20px;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 .newScore-form-input {
-  margin: 20px 0;
+  margin: 40px 0;
 }

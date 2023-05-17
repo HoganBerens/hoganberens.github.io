@@ -1,17 +1,7 @@
 .yourScores-wrapper {
-  min-height: 100vh;
-  width: 100%;
   background-color: #7395ae;
-}
-
-.yourScores-header {
   display: flex;
-  height: 10%;
-  width: 100vw;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #037cb7;
+  flex-direction: column;
 }
 
 .yourScores-round-results-wrapper {
