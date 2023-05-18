@@ -20,3 +20,10 @@ a:visited {
     background-image: linear-gradient(to bottom right, #cbe432, #2e2fe3);
   }
 }
+.homepage-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #090934;
+  position: relative;
+}
