@@ -45,8 +45,8 @@ const Dashboard = () => {
             </Link>
           </div>
         </div>
-        <div className="py-5 row gx-5">
-          <div className="col-12">
+        <div className=" yourStats-total-wrapper py-5 row gx-5">
+          <div className="col-md-10">
             <div className="my-golf-game-dashboard-card-stats">
               <YourStats />
             </div>

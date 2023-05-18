@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./newScore.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { user, clubs } from "./utils";
+import { clubs } from "./utils";
 import Header from "./header";
 import {
   faCheckCircle,
@@ -121,11 +121,10 @@ const NewScore = () => {
           </select>
           <div className="newScore-fairway-text-wrapper col-md-4">
             <div className="newScore-fairway-container">
-              <div className="newScore-fairway-hit">
+              <div className="newScore-fairway-hit" onClick={fairwayHitHandler}>
                 <div>FIR</div>
                 <FontAwesomeIcon
                   icon={faCheckCircle}
-                  onClick={fairwayHitHandler}
                   className="fairway-photo "
                   id="Faiway"
                 />
@@ -167,7 +166,7 @@ const NewScore = () => {
               onChange={missedFairwayLieSelectHandler}
             >
               <option hidden={true}>
-                What kind of lie did you have off the tee?
+                What lie did you have for your appr shot?
               </option>
               {missedFairwayLieOptions.map((lieOption, index) => (
                 <option ref={missedFairwayLieRef} key={index}>
@@ -236,9 +235,12 @@ const NewScore = () => {
             </div>
           </div>
           {missedGreen ? (
-            <select onChange={missedGreenSelectHandler}>
+            <select
+              className="missedGreen-lie-select col-md-4"
+              onChange={missedGreenSelectHandler}
+            >
               <option hidden={true}>
-                What kind of lie did you have around the green?
+                What lie did you have around the green?
               </option>
               {missedGreenLieOptions.map((greenLieOption, index) => (
                 <option ref={missedGreenLieRef} key={index}>

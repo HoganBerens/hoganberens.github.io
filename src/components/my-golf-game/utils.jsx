@@ -47,7 +47,7 @@ export let scores = [
       Name: 3,
       Par: 4,
       Distance: 327,
-      FIR: false,
+      FIR: true,
       apprDistance: 60,
       GIR: true,
       numberOfPutts: 1,

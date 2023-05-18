@@ -11,6 +11,10 @@ const ChangeClubs = () => {
   };
   let updateClubsHandler = () => {};
 
+  let oldClubHandler = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
     <div className="changeClubs-container">
       <Header />
@@ -27,7 +31,7 @@ const ChangeClubs = () => {
               >
                 {club}
               </div>
-              <FontAwesomeIcon icon={faCircleMinus} />
+              <FontAwesomeIcon onClick={oldClubHandler} icon={faCircleMinus} />
             </div>
           ))}
           <button onClick={updateClubsHandler}>Update Clubs</button>

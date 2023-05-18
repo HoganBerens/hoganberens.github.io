@@ -44,3 +44,8 @@ a:visited {
     height: 40%;
   }
 }
+
+.yourStats-total-wrapper {
+  display: flex;
+  justify-content: center;
+}

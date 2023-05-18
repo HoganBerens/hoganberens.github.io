@@ -23,18 +23,26 @@ const YourStats = () => {
   });
 
   return (
-    <div className="yourStats-wrapper row ">
-      <div className="yourStats-FIR-wrapper col-md-6 ">
-        <div>
-          {hitFIR} / {totalFairways} Fairways Hit
+    <div className="yourStats-wrapper  col-md-8">
+      <div className="yourStats-FIR-wrapper col-md-4 ">
+        <div className="yourStats-cell">
+          {/* {Math.round((hitFIR / totalFairways) * 100) / 100}% */}
+          <div className="yourStats-cell-chart"></div>
         </div>
-        <div>{(hitFIR / totalFairways) * 100}%</div>
+        <div className="yourStats-cell">
+          {hitFIR} / {totalFairways}
+          <div>Fairways Hit</div>
+        </div>
       </div>
-      <div className="yourStats-Gir-wrapper col-md-6 ">
-        <div>
-          {hitGIR} / {totalGreens}
+      <div className="yourStats-Gir-wrapper col-md-4 ">
+        <div className="yourStats-cell">
+          {/* 
+          {Math.round((hitGIR / totalGreens) * 100) / 100}% */}
+          <div className="yourStats-cell-chart"></div>
         </div>
-        <div>{(hitGIR / totalGreens) * 100}</div>
+        <div className="yourStats-cell">
+          {hitGIR} / {totalGreens} <div>Greens Hit</div>
+        </div>
       </div>
     </div>
   );

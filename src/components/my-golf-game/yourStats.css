@@ -1,12 +1,41 @@
 .yourStats-wrapper {
+  height: 100%;
   background-color: azure;
   align-items: center;
   border-radius: 6px;
   display: flex;
+  justify-content: space-around;
 }
 .yourStats-FIR-wrapper {
-  background-color: red;
+  height: 60%;
+  background-color: #7395ae;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 .yourStats-Gir-wrapper {
-  background-color: blue;
+  height: 60%;
+  background-color: #7395ae;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.yourStats-cell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.yourStats-cell-chart {
+  border: 3px solid black;
+  border-radius: 50%;
+  height: 100%;
+  width: 60%;
 }
