@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./newScore.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { clubs } from "./utils";
 import Header from "./header";
 import {
   faCheckCircle,
@@ -15,6 +14,8 @@ const NewScore = () => {
   const [missedFairway, setMissedFairway] = useState(false);
   const [missedGreen, setMissedGreen] = useState(false);
   const [roundScore, setRoundScore] = useState([]);
+
+  let clubs = JSON.parse(localStorage.clubs);
 
   let missedFairwayLieOptions = [
     "Rough",

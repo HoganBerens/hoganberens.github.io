@@ -1,10 +1,14 @@
-import { club } from "fontawesome";
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import "./changeClubs.css";
 import Header from "./header";
-import { clubs, possibleClubs } from "./utils";
+import { possibleClubs } from "./utils";
 
 const ChangeClubs = () => {
+  const [render, setRender] = useState(false);
+
+  let clubs = JSON.parse(localStorage.clubs);
+
   let arr1 = [];
 
   let clubChange = (clubIndex) => {
@@ -12,10 +16,34 @@ const ChangeClubs = () => {
   };
 
   let changeClubFormSubmit = (event) => {
+    event.preventDefault();
     for (let i = 0; i < arr1.length; i++) {
       clubs.splice(arr1[i].value, 1, event.target[arr1[i].value].value);
     }
+    localStorage.setItem("clubs", JSON.stringify(clubs));
+    setRender(true);
   };
+
+  useEffect(() => {
+    localStorage.setItem(
+      "clubs",
+      JSON.stringify([
+        "Driver",
+        "Three Wood",
+        "2 Iron",
+        "4 Iron",
+        "5 Iron",
+        "6 Iron ",
+        "7 Iron",
+        "8 Iron",
+        "9 Iron",
+        "Pitching Wedge",
+        "50 Degree",
+        "54 Degree",
+        "58 Degree",
+      ])
+    );
+  }, []);
 
   return (
     <div className="changeClubs-container">
