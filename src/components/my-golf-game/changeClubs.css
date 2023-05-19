@@ -10,21 +10,14 @@
   justify-content: center;
   flex: 1 1 auto;
 }
-.changeClubs-clubs-wrapper {
-  background-color: white;
+.changeClubs-clubs-container {
+  background-color: #7395ae;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-.changeClubs-club-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  align-items: center;
-}
-
-.changeClubs-clubs {
-  flex: 1 1 auto;
-}
-.changeClubs-club-name {
+.club {
+  margin: 10px;
+  font-size: 22px;
 }

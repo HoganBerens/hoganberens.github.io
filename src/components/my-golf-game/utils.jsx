@@ -14,6 +14,31 @@ export let clubs = [
   "58 Degree",
 ];
 
+export let possibleClubs = [
+  "Driver",
+  "3 Wood",
+  "5 Wood",
+  "7 Wood",
+  "3 Hybrid",
+  "5 Hybrid",
+  "7 Hybrid",
+  "2 Iron",
+  "3 Iron",
+  "4 Iron",
+  "5 Iron",
+  "6 Iron",
+  "7 Iron",
+  "8 Iron",
+  "9 Iron",
+  "Pitching Wedge",
+  "50 Degree",
+  "52 Degree",
+  "54 Degree",
+  "56 Degree",
+  "58 Degree",
+  "60 Degree",
+];
+
 export let course = {
   name: "Smoky Hill Country Club",
   Distance: "6146 yards",

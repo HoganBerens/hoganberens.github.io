@@ -1,41 +1,46 @@
+import { club } from "fontawesome";
 import React from "react";
 import "./changeClubs.css";
 import Header from "./header";
-import { clubs } from "./utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
+import { clubs, possibleClubs } from "./utils";
 
 const ChangeClubs = () => {
-  let clubSelectHandler = (event) => {
-    console.log(event.target);
-  };
-  let updateClubsHandler = () => {};
+  let arr1 = [];
 
-  let oldClubHandler = (event) => {
-    console.log(event.target.value);
+  let clubChange = (clubIndex) => {
+    arr1.push({ value: clubIndex });
+  };
+
+  let changeClubFormSubmit = (event) => {
+    for (let i = 0; i < arr1.length; i++) {
+      clubs.splice(arr1[i].value, 1, event.target[arr1[i].value].value);
+    }
   };
 
   return (
     <div className="changeClubs-container">
       <Header />
       <div className="changeClubs-content-wrapper container">
-        <div className="changeClubs-clubs-wrapper col-md-6 ">
+        <form
+          className="changeClubs-clubs-container col-md-6"
+          onSubmit={changeClubFormSubmit}
+        >
           {clubs.map((club, clubIndex) => (
-            <div
-              className="changeClubs-club-container col-md-4"
+            <select
               key={clubIndex}
+              className="club col-md-3"
+              onChange={clubChange.bind(this, clubIndex)}
             >
-              <div
-                className="changeClubs-club-name"
-                onClick={clubSelectHandler}
-              >
-                {club}
-              </div>
-              <FontAwesomeIcon onClick={oldClubHandler} icon={faCircleMinus} />
-            </div>
+              <option hidden={true}>{club}</option>
+              {possibleClubs.map((possibleClub, possibleClubIndex) => (
+                <option key={possibleClubIndex}>{possibleClub}</option>
+              ))}
+            </select>
           ))}
-          <button onClick={updateClubsHandler}>Update Clubs</button>
-        </div>
+          <button type="submit" className="club col-md-3">
+            Update Clubs
+          </button>
+        </form>
       </div>
     </div>
   );
