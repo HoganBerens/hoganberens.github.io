@@ -1,6 +1,6 @@
 import React from "react";
 import "./yourScores.css";
-import { scores, course } from "./utils";
+import { scores } from "./utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckCircle,
@@ -9,13 +9,11 @@ import {
 import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import Header from "./header";
 const YourScores = () => {
-  let allHoles = course.Holes;
-
   return (
     <div className="yourScores-wrapper">
       <Header />
       <div className="container">
-        <div className="yourScores-round-results-wrapper ">
+        <div className="yourScores-round-results-wrapper">
           {scores.map((score, scoreIndex) => (
             <div key={scoreIndex} className="d-flex">
               <div className="yourScores-round-values-wrapper">

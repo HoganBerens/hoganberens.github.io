@@ -24,24 +24,33 @@ const YourStats = () => {
 
   return (
     <div className="yourStats-wrapper  col-md-8">
-      <div className="yourStats-FIR-wrapper col-md-4 ">
-        <div className="yourStats-cell">
-          {/* {Math.round((hitFIR / totalFairways) * 100) / 100}% */}
-          <div className="yourStats-cell-chart"></div>
+      <div className="yourStats-title">Stats from your last 3 rounds</div>
+      <div className="yourStats-stats-container col-md-10">
+        <div className="yourStats-FIR-wrapper col-md-4 ">
+          <div className="yourStats-cell">
+            <div>Fairways Hit</div>
+          </div>
+          <div className="yourStats-cell">
+            {hitFIR} / {totalFairways}
+          </div>
+          <div className="yourStats-cell">
+            <div style={{ color: "lightgreen" }}>
+              {Math.round((hitFIR / totalFairways) * 100)}%
+            </div>
+          </div>
         </div>
-        <div className="yourStats-cell">
-          {hitFIR} / {totalFairways}
-          <div>Fairways Hit</div>
-        </div>
-      </div>
-      <div className="yourStats-Gir-wrapper col-md-4 ">
-        <div className="yourStats-cell">
-          {/* 
-          {Math.round((hitGIR / totalGreens) * 100) / 100}% */}
-          <div className="yourStats-cell-chart"></div>
-        </div>
-        <div className="yourStats-cell">
-          {hitGIR} / {totalGreens} <div>Greens Hit</div>
+        <div className="yourStats-Gir-wrapper col-md-4 ">
+          <div className="yourStats-cell">
+            <div>Greens Hit</div>
+          </div>
+          <div className="yourStats-cell">
+            {hitGIR} / {totalGreens}
+          </div>
+          <div className="yourStats-cell">
+            <div style={{ color: "red" }}>
+              {Math.round((hitGIR / totalGreens) * 100)}%
+            </div>
+          </div>
         </div>
       </div>
     </div>

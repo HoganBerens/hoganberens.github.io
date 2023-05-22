@@ -1,41 +1,38 @@
 .yourStats-wrapper {
   height: 100%;
-  background-color: azure;
-  align-items: center;
+  background-color: #f0ffff;
   border-radius: 6px;
+  flex-direction: column;
+  align-items: center;
   display: flex;
+  justify-content: space-around;
+}
+.yourStats-title {
+  font-size: 30px;
+}
+.yourStats-stats-container {
+  display: flex;
+  height: 60%;
   justify-content: space-around;
 }
 .yourStats-FIR-wrapper {
-  height: 60%;
   background-color: #7395ae;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 .yourStats-Gir-wrapper {
-  height: 60%;
   background-color: #7395ae;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 .yourStats-cell {
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 28px;
   padding: 5px;
   flex-direction: column;
-}
-
-.yourStats-cell-chart {
-  border: 3px solid black;
-  border-radius: 50%;
-  height: 100%;
-  width: 60%;
+  margin-bottom: 30px;
 }

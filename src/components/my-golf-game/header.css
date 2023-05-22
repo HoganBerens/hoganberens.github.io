@@ -1,7 +1,7 @@
 .my-golf-game-header {
   display: flex;
   flex-direction: row;
-  height: 10%;
+  height: 97px;
   justify-content: space-between;
   background-color: #037cb7;
 }
