@@ -35,49 +35,51 @@ const YourScores = () => {
                 </div>
               </div>
               <table>
-                <tr className="yourScores-player-score-map-wrapper">
-                  {score.map((hole, holeIndex) => (
-                    <td key={holeIndex} className="yourScores-hole-value">
-                      <div className="cell">{holeIndex + 1}</div>
-                      <div className="cell">{hole.Distance}</div>
-                      <div className="cell">{hole.Par}</div>
-                      <FontAwesomeIcon
-                        className={`cell cell-icon ${
-                          hole.FIR
-                            ? "green-check"
-                            : hole.Par !== 3
-                            ? "red-x"
-                            : "black-minus"
-                        }`}
-                        icon={
-                          hole.FIR
-                            ? faCheckCircle
-                            : hole.Par !== 3
-                            ? faTimesCircle
-                            : faMinusCircle
-                        }
-                      >
-                        {!hole.FIR && hole.Par === 3 ? "-" : null}
-                      </FontAwesomeIcon>
-                      <div className="cell">
-                        {hole.apprDistance ? (
-                          hole.apprDistance
-                        ) : (
-                          <FontAwesomeIcon icon={faMinusCircle} />
-                        )}
-                      </div>
-                      <FontAwesomeIcon
-                        className={`cell cell-icon ${
-                          hole.GIR ? "green-check" : "red-x"
-                        }`}
-                        icon={hole.GIR ? faCheckCircle : faTimesCircle}
-                      />
-                      <div className="cell">{hole.numberOfPutts}</div>
+                <tbody>
+                  <tr className="yourScores-player-score-map-wrapper">
+                    {score.map((hole, holeIndex) => (
+                      <td key={holeIndex} className="yourScores-hole-value">
+                        <div className="cell">{holeIndex + 1}</div>
+                        <div className="cell">{hole.Distance}</div>
+                        <div className="cell">{hole.Par}</div>
+                        <FontAwesomeIcon
+                          className={`cell cell-icon ${
+                            hole.FIR
+                              ? "green-check"
+                              : hole.Par !== 3
+                              ? "red-x"
+                              : "black-minus"
+                          }`}
+                          icon={
+                            hole.FIR
+                              ? faCheckCircle
+                              : hole.Par !== 3
+                              ? faTimesCircle
+                              : faMinusCircle
+                          }
+                        >
+                          {!hole.FIR && hole.Par === 3 ? "-" : null}
+                        </FontAwesomeIcon>
+                        <div className="cell">
+                          {hole.apprDistance ? (
+                            hole.apprDistance
+                          ) : (
+                            <FontAwesomeIcon icon={faMinusCircle} />
+                          )}
+                        </div>
+                        <FontAwesomeIcon
+                          className={`cell cell-icon ${
+                            hole.GIR ? "green-check" : "red-x"
+                          }`}
+                          icon={hole.GIR ? faCheckCircle : faTimesCircle}
+                        />
+                        <div className="cell">{hole.numberOfPutts}</div>
 
-                      <div className="cell">{hole.Score}</div>
-                    </td>
-                  ))}
-                </tr>
+                        <div className="cell">{hole.Score}</div>
+                      </td>
+                    ))}
+                  </tr>
+                </tbody>
               </table>
             </div>
           ))}
