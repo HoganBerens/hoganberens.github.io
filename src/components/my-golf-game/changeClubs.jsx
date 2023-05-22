@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import "./changeClubs.css";
 import Header from "./header";
 import { possibleClubs } from "./utils";
