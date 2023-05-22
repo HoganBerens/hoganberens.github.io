@@ -6,9 +6,7 @@ import { possibleClubs } from "./utils";
 
 const ChangeClubs = () => {
   const [render, setRender] = useState(false);
-
-  let clubs = JSON.parse(localStorage.clubs);
-
+  let clubs = localStorage.getItem("clubs", JSON.parse("clubs"));
   let arr1 = [];
 
   let clubChange = (clubIndex) => {

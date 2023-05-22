@@ -15,7 +15,7 @@ const NewScore = () => {
   const [missedGreen, setMissedGreen] = useState(false);
   const [roundScore, setRoundScore] = useState([]);
 
-  let clubs = JSON.parse(localStorage.clubs);
+  let clubs = localStorage.getItem("clubs", JSON.parse("clubs"));
 
   let missedFairwayLieOptions = [
     "Rough",
