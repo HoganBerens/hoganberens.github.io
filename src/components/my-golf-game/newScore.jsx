@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./newScore.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "./header";
@@ -14,8 +14,21 @@ const NewScore = () => {
   const [missedFairway, setMissedFairway] = useState(false);
   const [missedGreen, setMissedGreen] = useState(false);
   const [roundScore, setRoundScore] = useState([]);
-
-  let clubs = localStorage.getItem("clubs", JSON.parse("clubs"));
+  const clubs = [
+    "Driver",
+    "Three Wood",
+    "2 Iron",
+    "4 Iron",
+    "5 Iron",
+    "6 Iron ",
+    "7 Iron",
+    "8 Iron",
+    "9 Iron",
+    "Pitching Wedge",
+    "50 Degree",
+    "54 Degree",
+    "58 Degree",
+  ];
 
   let missedFairwayLieOptions = [
     "Rough",

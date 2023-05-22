@@ -5,8 +5,22 @@ import Header from "./header";
 import { possibleClubs } from "./utils";
 
 const ChangeClubs = () => {
+  const clubs = [
+    "Driver",
+    "Three Wood",
+    "2 Iron",
+    "4 Iron",
+    "5 Iron",
+    "6 Iron ",
+    "7 Iron",
+    "8 Iron",
+    "9 Iron",
+    "Pitching Wedge",
+    "50 Degree",
+    "54 Degree",
+    "58 Degree",
+  ];
   const [render, setRender] = useState(false);
-  let clubs = localStorage.getItem("clubs", JSON.parse("clubs"));
   let arr1 = [];
 
   let clubChange = (clubIndex) => {
@@ -18,30 +32,8 @@ const ChangeClubs = () => {
     for (let i = 0; i < arr1.length; i++) {
       clubs.splice(arr1[i].value, 1, event.target[arr1[i].value].value);
     }
-    localStorage.setItem("clubs", JSON.stringify(clubs));
     setRender(true);
   };
-
-  useEffect(() => {
-    localStorage.setItem(
-      "clubs",
-      JSON.stringify([
-        "Driver",
-        "Three Wood",
-        "2 Iron",
-        "4 Iron",
-        "5 Iron",
-        "6 Iron ",
-        "7 Iron",
-        "8 Iron",
-        "9 Iron",
-        "Pitching Wedge",
-        "50 Degree",
-        "54 Degree",
-        "58 Degree",
-      ])
-    );
-  }, []);
 
   return (
     <div className="changeClubs-container">
