@@ -39,7 +39,7 @@ const ChangeClubs = () => {
       <Header />
       <div className="changeClubs-content-wrapper container">
         <form
-          className="changeClubs-clubs-container col-md-6"
+          className="changeClubs-clubs-container col-md-12"
           onSubmit={changeClubFormSubmit}
         >
           {clubs.map((club, clubIndex) => (

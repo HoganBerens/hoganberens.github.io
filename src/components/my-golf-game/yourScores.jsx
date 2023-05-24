@@ -16,6 +16,7 @@ const YourScores = () => {
         <div className="yourScores-round-results-wrapper">
           {scores.map((score, scoreIndex) => (
             <div key={scoreIndex} className="d-flex">
+              <div>something describing the score displayed</div>
               <div className="yourScores-round-values-wrapper">
                 <div className="yourScores-course-values-wrapper">
                   {[
