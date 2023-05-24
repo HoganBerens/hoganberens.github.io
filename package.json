@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -48,7 +48,12 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@testing-library/dom": "^9.3.0",
     "gh-pages": "^5.0.0"
+=======
+    "gh-pages": "^5.0.0",
+    "jest": "^27.5.1"
+>>>>>>> 4e2c9b7ab3f469cac60769633c1c3c13f1791cb5
   }
 }
