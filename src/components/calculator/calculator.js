@@ -1,14 +1,12 @@
-import React, { useCallback, useState } from "react";
-import "./calculator.css";
-import { Link } from "react-router-dom";
+import React, { useCallback, useState } from 'react';
+import './calculator.css';
+import { Link } from 'react-router-dom';
 
 const Calculator = () => {
-  const [updatedNumber, setUpdatedNumber] = useState("");
-  const [firstNumber, setFirstNumber] = useState("");
-  const [mathSymbol, setMathSymbol] = useState("");
-  const [displayValue, setDisplayValue] = useState("0");
-
-  const backHandler = () => {};
+  const [updatedNumber, setUpdatedNumber] = useState('');
+  const [firstNumber, setFirstNumber] = useState('');
+  const [mathSymbol, setMathSymbol] = useState('');
+  const [displayValue, setDisplayValue] = useState('0');
 
   const handleNumber = useCallback(
     (number) => {
@@ -22,7 +20,7 @@ const Calculator = () => {
   const handleSymbol = useCallback(
     (symbol) => {
       setFirstNumber(updatedNumber);
-      setUpdatedNumber("");
+      setUpdatedNumber('');
       setMathSymbol(symbol);
     },
     [updatedNumber]
@@ -32,19 +30,19 @@ const Calculator = () => {
     let num1 = parseInt(firstNumber);
     let num2 = parseInt(updatedNumber);
     switch (mathSymbol) {
-      case "+":
+      case '+':
         setDisplayValue(num1 + num2);
         setUpdatedNumber(num1 + num2);
         break;
-      case "-":
+      case '-':
         setDisplayValue(num1 - num2);
         setUpdatedNumber(num1 - num2);
         break;
-      case "*":
+      case '*':
         setDisplayValue(num1 * num2);
         setUpdatedNumber(num1 * num2);
         break;
-      case "/":
+      case '/':
         setDisplayValue(num1 / num2);
         setUpdatedNumber(num1 / num2);
         break;
@@ -52,10 +50,10 @@ const Calculator = () => {
   }, [firstNumber, displayValue, updatedNumber, mathSymbol]);
 
   const handleClear = () => {
-    setDisplayValue("0");
-    setMathSymbol("");
-    setUpdatedNumber("");
-    setFirstNumber("");
+    setDisplayValue('0');
+    setMathSymbol('');
+    setUpdatedNumber('');
+    setFirstNumber('');
   };
 
   return (
@@ -67,7 +65,7 @@ const Calculator = () => {
         <div className="calculator-display">{displayValue}</div>
         <div className="calculator-buttons-wrapper">
           <div className="calculator-numbers-wrapper">
-            {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].map(
+            {['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].map(
               (number, index) => (
                 <button
                   key={index}
@@ -80,7 +78,7 @@ const Calculator = () => {
             )}
           </div>
           <div className="calculator-operator-wrapper">
-            {["+", "-", "*", "/"].map((symbol, index) => (
+            {['+', '-', '*', '/'].map((symbol, index) => (
               <button
                 key={index}
                 className="calculator-symbols"
