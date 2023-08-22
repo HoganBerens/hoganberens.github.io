@@ -46,7 +46,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className=" yourStats-total-wrapper py-5 row gx-5">
-          <div className="col-md-10">
+          <div className="col-md-12">
             <div className="my-golf-game-dashboard-card-stats">
               <YourStats />
             </div>
