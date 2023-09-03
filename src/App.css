@@ -9,17 +9,6 @@ a:visited {
   text-decoration: none;
 }
 
-.dashboard-wrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #090934;
-
-  @media (min-width: 768px) {
-    background-image: linear-gradient(to bottom right, #cbe432, #2e2fe3);
-  }
-}
 .homepage-container {
   display: flex;
   align-items: center;

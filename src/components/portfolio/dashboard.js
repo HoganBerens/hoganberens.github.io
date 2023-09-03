@@ -1,17 +1,16 @@
 import React from "react";
-import AboutMe from "./aboutMe";
-import Projects from "./projects";
+import Navigation from "../Navigation/Navigation";
+import Content from "../Content/Content";
 import "./dashboard.css";
 
 const Dashboard = () => {
   return (
     <div className="dashboard-wrapper">
-      <div className="homepage-container">
-        <div className="dashboard-background-box" />
-        <div className="dashboard-box-wrapper">
-          <AboutMe />
-          <Projects />
-        </div>
+      <nav className="dashboard-navbar-wrapper">
+        <Navigation />
+      </nav>
+      <div className="dashboard-content-wrapper">
+        <Content />
       </div>
     </div>
   );

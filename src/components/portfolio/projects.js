@@ -16,6 +16,9 @@ const Projects = () => {
         <Link className="projects" to="/calculator">
           Calculator
         </Link>
+        <Link className="projects" to="https://hogans-golf-stats-tracker-471d20cc5c65.herokuapp.com">
+          Golf-Stats-Tracker
+        </Link>
       </div>
     </div>
   );

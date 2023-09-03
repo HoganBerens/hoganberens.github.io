@@ -1,128 +1,20 @@
-.dashboard-border-wrapper {
+.dashboard-wrapper {
+  height: 100vh;
   display: flex;
-  border-style: solid;
-  border-width: 20px;
-  border-image: conic-gradient(
-      #f3f7d4,
-      #f3f7d4,
-      #f3f7d4,
-      #f3f7d4,
-      #2e2fe3,
-      #f3f7d4,
-      #f3f7d4,
-      #f3f7d4,
-      #f3f7d4,
-      #f3f7d4,
-      #2e2fe3,
-      #f3f7d4,
-      #f3f7d4
-    )
-    1;
-  border-radius: 6px;
-}
 
+  align-items: center;
+  justify-content: center;
+  color: #090934;
+  @media (min-width: 768px) {
+  }
+}
+.dashboard-navbar-wrapper {
+  display: flex;
+  width: 180px;
+  background-color: rgb(13 67 115);
+  height: 100vh;
+}
 .dashboard-content-wrapper {
   display: flex;
-  flex-direction: column;
-  max-width: 1500px;
-  max-height: 872px;
-  padding-bottom: 80px;
-}
-
-.dashboard-header-wrapper {
-  width: 210px;
-  align-self: flex-end;
-  height: 60px;
-}
-
-.links-wrapper {
-  display: flex;
-  align-items: center;
-  height: 60vh;
-  width: 60vw;
-  justify-content: space-around;
-}
-
-.dashboard-background-box {
-  min-height: 800px;
-  min-width: 1000px;
-  background: darksalmon;
-  margin-right: 75px;
-  margin-bottom: 75px;
-  border-radius: 3px;
-}
-
-.dashboard-box-wrapper {
-  min-height: 800px;
-  min-width: 1000px;
-  max-width: 1000px;
-  max-height: 800px;
-  background: #f3f7d4;
-  position: absolute;
-  z-index: 2;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  top: 40px;
-  left: 40px;
-}
-@media screen and (max-width: 1450px) {
-  .dashboard-box-wrapper {
-    max-width: 800px;
-    max-height: 600px;
-    min-width: 800px;
-    min-height: 600px;
-    justify-content: space-between;
-    flex: 1 1 auto;
-    padding: 25px;
-  }
-  .dashboard-background-box {
-    max-width: 800px;
-    max-height: 600px;
-    min-width: 800px;
-    min-height: 600px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .dashboard-box-wrapper {
-    max-width: 600px;
-    max-height: 400px;
-    min-width: 600px;
-    min-height: 400px;
-    padding: 15px;
-  }
-  .dashboard-background-box {
-    max-width: 600px;
-    max-height: 400px;
-    min-width: 600px;
-    min-height: 400px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .dashboard-background-box {
-    display: none;
-  }
-
-  .dashboard-box-wrapper {
-    width: 100vw;
-    min-width: unset;
-    max-width: unset;
-    min-height: unset;
-    max-height: unset;
-    height: 100vh;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .aboutMe-wrapper {
-    justify-content: unset;
-  }
-
-  .project-wrapper {
-    flex: 1 1 auto;
-  }
+  width: 100%;
 }
