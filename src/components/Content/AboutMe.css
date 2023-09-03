@@ -1,0 +1,22 @@
+.aboutMe-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 150px;
+}
+.aboutMe-title {
+  color: rgb(13 67 115);
+  margin-bottom: 15px;
+}
+.aboutMe-content {
+  font-size: 18px;
+}
+.aboutMe-currentTech {
+  display: flex;
+  max-width: 640px;
+  flex-wrap: wrap;
+}
+.aboutMe-tech-item {
+  width: 200px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}

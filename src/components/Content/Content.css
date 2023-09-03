@@ -1,0 +1,44 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 90px;
+}
+.content-description-wrapper {
+  padding: 60px 0 150px;
+}
+.content-name {
+  font-size: 48px;
+}
+.content-title {
+  font-size: 44px;
+  padding-bottom: 15px;
+}
+.content-description {
+  font-size: 18px;
+}
+.content-links-wrapper {
+  display: flex;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.content-link {
+  display: flex;
+  width: 100px;
+  margin-left: 20px;
+  background-color: rgb(13 67 115);
+  color: white;
+  justify-content: center;
+}
+.content-link2 {
+  display: flex;
+  width: 100px;
+  background-color: rgb(13 67 115);
+  color: white;
+  justify-content: center;
+}
+.content-githubLogo {
+  height: 30px;
+  width: 30px;
+}
