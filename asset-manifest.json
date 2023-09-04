@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.5a4c118f.css",
-    "main.js": "/static/js/main.f3efa269.js",
+    "main.js": "/static/js/main.5b541fb3.js",
     "static/js/787.e4d63149.chunk.js": "/static/js/787.e4d63149.chunk.js",
     "static/media/MovieListScreenShot.png": "/static/media/MovieListScreenShot.34f198fb99dd1a4883e4.png",
     "static/media/BlackJackScreenShot.png": "/static/media/BlackJackScreenShot.3cbe37f56dd5fa07366a.png",
     "index.html": "/index.html",
     "main.5a4c118f.css.map": "/static/css/main.5a4c118f.css.map",
-    "main.f3efa269.js.map": "/static/js/main.f3efa269.js.map",
+    "main.5b541fb3.js.map": "/static/js/main.5b541fb3.js.map",
     "787.e4d63149.chunk.js.map": "/static/js/787.e4d63149.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a4c118f.css",
-    "static/js/main.f3efa269.js"
+    "static/js/main.5b541fb3.js"
   ]
 }
