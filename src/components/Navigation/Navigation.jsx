@@ -7,7 +7,7 @@ import {
   faUser,
   faFolderOpen,
   faLink,
-  faEnvelope,
+  faFileExport,
 } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = () => {
@@ -19,33 +19,41 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon className="fa-sm" icon={faHouse} />
           </div>
-          <div className="navigation-link-item">Home</div>
+          <a href="" className="navigation-link-item">
+            <span className="navigation-link-item">Home</span>
+          </a>
         </div>
         <div className="navigation-link">
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faUser} />
           </div>
-          <div className="navigation-link-item">About</div>
+          <a href="" className="navigation-link-item">
+            <span className="navigation-link-item">About</span>
+          </a>
         </div>
         <div className="navigation-link">
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faFolderOpen} />
           </div>
-          <div className="navigation-link-item">Projects</div>
+          <a href="" className="navigation-link-item">
+            <span className="navigation-link-item">Projects</span>
+          </a>
         </div>
-        <div className="navigation-link">
+        <div className="navigation-contact">
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faLink} />
           </div>
-          <div className="navigation-link-item">Resume</div>
+          <a href="">
+            <span className="navigation-link-item">Contact</span>
+          </a>
         </div>
       </div>
       <div className="navigation-profile-links">
-        <div className="navigation-contact">
+        <div className="navigation-link">
           <div className="navigation-link-item">
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faFileExport} />
           </div>
-          <div className="navigation-link-item">Contact</div>
+          <div className="navigation-link-item">Resume</div>
         </div>
       </div>
     </div>

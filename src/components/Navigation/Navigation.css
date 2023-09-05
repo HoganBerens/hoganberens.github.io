@@ -25,7 +25,10 @@
 .navigation-link-item {
   margin-left: 10px;
   font-size: 18px;
+  color: white;
+  align-self: center;
 }
+
 .navigation-profile-links {
   display: flex;
   height: 100%;

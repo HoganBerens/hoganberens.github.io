@@ -1,5 +1,19 @@
 .contact-wrapper {
   display: flex;
+  flex-direction: column;
   width: 80%;
-  margin-bottom: 90px;
+  padding-bottom: 90px;
+}
+.contact-links-profile {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.contact-link {
+  color: black;
+  font-size: 18px;
+}
+.contact-link:hover {
+  color: rgb(13 67 115);
+  text-decoration: underline;
 }
