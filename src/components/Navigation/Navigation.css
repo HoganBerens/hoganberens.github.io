@@ -19,10 +19,24 @@
 }
 .navigation-link {
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+.navigation-link-item {
+  margin-left: 10px;
+  font-size: 18px;
 }
 .navigation-profile-links {
   display: flex;
   height: 100%;
   align-items: end;
   margin-bottom: 40px;
+}
+.logo {
+  height: 20px;
+  width: 20px;
+}
+
+.navigation-contact {
+  display: flex;
 }
