@@ -8,15 +8,27 @@
 .projects-title {
   color: rgb(13 67 115);
   margin-bottom: 15px;
+  font-size: 24px;
 }
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  width: 1200px;
-  max-width: 1201px;
+  width: 1600px;
 }
 .projects-image {
-  height: 200px;
-  width: 400px;
+  height: 300px;
+  width: 500px;
   padding: 5px;
+}
+.projects-description-container {
+  position: relative;
+}
+.projects-description {
+  font-size: 11px;
+  width: 380px;
+  flex-wrap: wrap;
+  color: black;
+  position: absolute;
+  z-index: 4;
+  bottom: 100px;
 }

@@ -1,14 +1,8 @@
-import './Navigation.css';
-import githubLogo from '../../assets/githubLogo.png';
-import linkedInlogoSS from '../../assets/linkedInlogoSS.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHouse,
-  faUser,
-  faFolderOpen,
-  faLink,
-  faFileExport,
-} from '@fortawesome/free-solid-svg-icons';
+import "./Navigation.css";
+import githubLogo from "../../assets/githubLogo.png";
+import linkedInlogoSS from "../../assets/linkedInlogoSS.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse, faUser, faFolderOpen, faLink, faFileExport } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   return (
@@ -19,7 +13,7 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon className="fa-sm" icon={faHouse} />
           </div>
-          <a href="" className="navigation-link-item">
+          <a href="/" className="navigation-link-item">
             <span className="navigation-link-item">Home</span>
           </a>
         </div>
@@ -27,7 +21,7 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faUser} />
           </div>
-          <a href="" className="navigation-link-item">
+          <a href="#aboutMe" className="navigation-link-item">
             <span className="navigation-link-item">About</span>
           </a>
         </div>
@@ -35,7 +29,7 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faFolderOpen} />
           </div>
-          <a href="" className="navigation-link-item">
+          <a href="#projects" className="navigation-link-item">
             <span className="navigation-link-item">Projects</span>
           </a>
         </div>
@@ -43,7 +37,7 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faLink} />
           </div>
-          <a href="">
+          <a href="#contact">
             <span className="navigation-link-item">Contact</span>
           </a>
         </div>
