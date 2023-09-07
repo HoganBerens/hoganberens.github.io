@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { api_key, popular, imagePath, videoPath } from "./utils";
+import { api_key, imagePath, videoPath } from "./utils";
 import "./viewMovie.css";
 import { Link } from "react-router-dom";
 import Header from "./header";
@@ -8,26 +8,17 @@ const ViewMovie = () => {
   const [clickedMovie, setClickedMovie] = useState({});
 
   const trailerHandler = () => {
-    fetch(
-      `${videoPath}${clickedMovie.id}/videos?api_key=${api_key}&language=en-US`
-    )
+    fetch(`${videoPath}${clickedMovie.id}/videos?api_key=${api_key}&language=en-US`)
       .then((response) => response.json())
       .then((data) => {
-        let trailer = data.results.find(
-          (movie) => movie.name === "Official Trailer"
-        );
+        let trailer = data.results.find((movie) => movie.name === "Official Trailer");
 
         window.open(`https://www.youtube.com/watch?v=${trailer.key}`, "_blank");
       });
   };
 
   useEffect(() => {
-    fetch(
-      `${videoPath}${window.location.search.replace(
-        "?id=",
-        ""
-      )}?api_key=${api_key}&language=en-US`
-    )
+    fetch(`${videoPath}${window.location.search.replace("?id=", "")}?api_key=${api_key}&language=en-US`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -38,10 +29,7 @@ const ViewMovie = () => {
     <div className="view-movie-container">
       <Header />
       <div className="viewMovie-wrapper">
-        <img
-          className="moviePoster"
-          src={`${imagePath}${clickedMovie.poster_path}`}
-        />
+        <img className="moviePoster" src={`${imagePath}${clickedMovie.poster_path}`} />
         <div className="viewMovie-childrenWrapper">
           <h1 className="view-movie-title">{clickedMovie.title}</h1>
           <div className="viewMovie-description">

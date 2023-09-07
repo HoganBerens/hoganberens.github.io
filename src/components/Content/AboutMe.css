@@ -10,6 +10,7 @@
 }
 .aboutMe-content {
   font-size: 18px;
+  max-width: 70%;
 }
 .aboutMe-currentTech {
   display: flex;

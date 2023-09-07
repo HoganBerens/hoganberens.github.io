@@ -1,20 +1,15 @@
 import "./Navigation.css";
-import githubLogo from "../../assets/githubLogo.png";
-import linkedInlogoSS from "../../assets/linkedInlogoSS.png";
+import Headshot from "../../assets/Headshot.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faUser,
-  faFolderOpen,
-  faLink,
-  faFileExport,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faUser, faFolderOpen, faLink, faFileExport } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   return (
     <div className="navigation-container">
       <div className="navigation-links">
-        <div className="navigation-profile-pic">placeHolder</div>
+        <div className="navigation-profile-pic">
+          <img className="navigation-headshot" src={Headshot} />
+        </div>
         <div className="navigation-link">
           <div className="navigation-link-item">
             <FontAwesomeIcon className="fa-sm" icon={faHouse} />
@@ -53,10 +48,7 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faFileExport} />
           </div>
-          <a
-            href="https://docs.google.com/document/d/11kGvdQ9orlkMnjX_Ve5cIR5AfOhKXXAgiTvzleVjpUY/edit?usp=sharing"
-            target="_blank"
-          >
+          <a href="https://docs.google.com/document/d/11kGvdQ9orlkMnjX_Ve5cIR5AfOhKXXAgiTvzleVjpUY/edit?usp=sharing" target="_blank">
             <span className="navigation-link-item">Resume</span>
           </a>
         </div>
