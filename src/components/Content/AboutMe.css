@@ -26,3 +26,8 @@
   color: rgb(13 67 115);
   margin-right: 5px;
 }
+@media only screen and (max-width: 800px) {
+  .aboutMe-content {
+    max-width: 100%;
+  }
+}
