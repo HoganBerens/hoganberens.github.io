@@ -1,14 +1,14 @@
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  width: 75%;
-  padding: 50px 90px 90px 115px;
+  padding: 75px 75px 0;
 }
 .content-description-wrapper {
-  padding: 60px 0 150px;
+  padding-bottom: 150px;
 }
 .content-name-title {
   color: rgb(13 67 115);
+  font-size: 24px;
 }
 .content-name {
   font-size: 48px;
@@ -23,26 +23,32 @@
 }
 .content-links-wrapper {
   display: flex;
-  margin-top: 15px;
+  margin-top: 30px;
   font-size: 18px;
 }
 
 .content-link {
   display: flex;
-  width: 100px;
-  margin-left: 20px;
+  width: 150px;
+  height: 38px;
+  margin-right: 20px;
   background-color: rgb(13 67 115);
-  color: white;
+  color: white !important;
   justify-content: center;
+  border-radius: 3px;
 }
-.content-link2 {
-  display: flex;
-  width: 100px;
-  background-color: rgb(13 67 115);
+.content-link:hover {
   color: white;
-  justify-content: center;
+  background-color: midnightblue;
 }
+
 .content-githubLogo {
   height: 30px;
   width: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-wrapper {
+    padding: 25px 25px 0;
+  }
 }

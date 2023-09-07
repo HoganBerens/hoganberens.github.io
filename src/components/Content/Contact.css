@@ -1,23 +1,52 @@
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  padding-bottom: 90px;
+  padding-bottom: 75px;
+  align-items: center;
 }
 .contact-links-profile {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  min-width: 60%;
+  max-width: 60%;
 }
 .contact-link {
   color: black;
   font-size: 18px;
 }
+
 .contact-link:hover {
   color: rgb(13 67 115);
   text-decoration: underline;
 }
 
+.contact-resume {
+  display: none;
+}
+
 .contact-email {
   font-size: 22px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .contact-links-profile {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-link {
+    margin-bottom: 20px;
+  }
+
+  .contact-resume {
+    display: flex;
+  }
 }
