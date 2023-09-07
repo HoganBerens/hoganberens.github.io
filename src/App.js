@@ -9,9 +9,9 @@ function App() {
   return (
     <Routes>
       <Route path={'/'} exact={true} element={<Dashboard />} />
-      <Route path={'/viewMovie'} exact={true} element={<ViewMovie />} />
-      <Route path={'/movieList'} exact={true} element={<MovieListHome />} />
-      <Route path={'/calculator'} exact={true} element={<Calculator />} />
+      <Route path={'/viewMovie'} element={<ViewMovie />} />
+      <Route path={'/movieList'} element={<MovieListHome />} />
+      <Route path={'/calculator'} element={<Calculator />} />
     </Routes>
   );
 }

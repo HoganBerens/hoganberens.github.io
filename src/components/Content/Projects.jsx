@@ -1,10 +1,10 @@
-import "./Projects.css";
-import BlackJackSS from "../../assets/BlackJackScreenShot.png";
-import MovieListSS from "../../assets/MovieListScreenShot.png";
-import OutingsSS from "../../assets/OutingsSS.png";
-import CalculatorSS from "../../assets/CalculatorSS.png";
-import golfStatsTrackerSS from "../../assets/golfStatsTrackerSS.png";
-import { Link } from "react-router-dom";
+import './Projects.css';
+import BlackJackSS from '../../assets/BlackJackScreenShot.png';
+import MovieListSS from '../../assets/MovieListScreenShot.png';
+import OutingsSS from '../../assets/OutingsSS.png';
+import CalculatorSS from '../../assets/CalculatorSS.png';
+import golfStatsTrackerSS from '../../assets/golfStatsTrackerSS.png';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   return (
@@ -55,11 +55,7 @@ const Projects = () => {
             </span>
           </div>
         </Link>
-        <Link
-          target="_blank"
-          to="/movieList"
-          className="projects-description-container"
-        >
+        <Link to="/movieList" className="projects-description-container">
           <img src={MovieListSS} className="projects-image" />
           <div className="projects-description">
             <span className="projects-description-text">
@@ -69,11 +65,7 @@ const Projects = () => {
             </span>
           </div>
         </Link>
-        <Link
-          target="_blank"
-          to="/calculator"
-          className="projects-description-container"
-        >
+        <Link to="/calculator" className="projects-description-container">
           <img src={CalculatorSS} className="projects-image" />
           <div className="projects-description">
             <span className="projects-description-text">
