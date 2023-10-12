@@ -49,7 +49,7 @@ const Projects = () => {
         <Link to="/calculator" className="projects-description-container">
           <img src={CalculatorSS} className="projects-image" />
           <div className="projects-description">
-            <span className="projects-description-text">Calulator is a single page app built using React and CSS. Use this app in place of your everyday calculator!</span>
+            <span className="projects-description-text">Calculator is a single page app built using React and CSS. Use this app in place of your everyday calculator!</span>
           </div>
         </Link>
       </div>
