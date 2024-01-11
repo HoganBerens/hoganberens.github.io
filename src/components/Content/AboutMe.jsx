@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = () => {
-  let tech = ["JavaScript", "React", "Jest", "Node.js", "HTML", "CSS", "Express", "Python", "MongoDB", "PostgreSQL"];
+  let tech = ["Python", "Django", "JavaScript", "React", "Jest", "Node.js", "HTML", "CSS", "Express", "PostgreSQL", "MongoDB"];
 
   return (
     <div className="aboutMe-wrapper">
