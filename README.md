@@ -12,5 +12,5 @@ This application is my personal portfolio and displays my past projects, contact
 
 # Getting Started
 
-[Click here to visit Shared-Calendar] [https://hoganberens.github.io/]
+[Click here to visit hoganberens.github.io] [https://hoganberens.github.io/]
 
