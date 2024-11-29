@@ -48,7 +48,7 @@ const Navigation = () => {
           <div className="navigation-link-item">
             <FontAwesomeIcon icon={faFileExport} />
           </div>
-          <a href="https://docs.google.com/document/d/11kGvdQ9orlkMnjX_Ve5cIR5AfOhKXXAgiTvzleVjpUY/edit?usp=sharing" target="_blank">
+          <a href="https://docs.google.com/document/d/1fiQrOVl4DGPVJx6pKBlQ87OsSM6rn5od/edit?usp=sharing&ouid=100137496040470646803&rtpof=true&sd=true" target="_blank">
             <span className="navigation-link-item">Resume</span>
           </a>
         </div>

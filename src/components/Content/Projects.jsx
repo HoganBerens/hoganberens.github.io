@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   return (
     <div className="projects-wrapper">
-      <div className="projects-title" id="projects">
+      {/* <div className="projects-title" id="projects">
         Projects
       </div>
       <div className="projects-container">
@@ -52,7 +52,7 @@ const Projects = () => {
             <span className="projects-description-text">Calculator is a single page app built using React and CSS. Use this app in place of your everyday calculator!</span>
           </div>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

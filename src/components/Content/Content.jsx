@@ -26,7 +26,7 @@ const Content = () => {
         </div>
       </div>
       <AboutMe />
-      <Projects />
+      {/* <Projects /> */}
       <Contact />
     </div>
   );
